@@ -2,6 +2,9 @@ package:
     name: eman-dependencies
     version: '1.0'
 
+build:
+    skip: True  # [win32]
+
 requirements:
     {% set reqs_common = [
             "python 2.7.*",
