@@ -41,3 +41,6 @@ requirements:
         - theano
         - scikit-learn
         - pydusa  # [not win]
+
+about:
+  summary: Meta-package for eman2 dependencies
