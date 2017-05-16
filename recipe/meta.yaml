@@ -3,7 +3,7 @@ package:
     version: '1.0'
 
 build:
-    number: 3
+    number: 4
     skip: True  # [win32]
 
 requirements:
@@ -18,7 +18,7 @@ requirements:
             "hdf5",
             "jpeg",
             "libtiff",
-            "libpng >=1.6.*",
+            "libpng",
             "zlib",
             "szip",  # [win]
             "bsddb",  # [not win]
