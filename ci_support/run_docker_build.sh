@@ -58,6 +58,8 @@ conda clean --lock
 conda install --yes --quiet conda-forge-build-setup
 source run_conda_forge_build_setup
 
+conda update conda-build
+
 set +e
 
 # Embarking on 6 case(s).
