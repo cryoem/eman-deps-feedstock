@@ -9,6 +9,7 @@ channels:
   sources: [cryoem, defaults, conda-forge]
   targets:
   - [cryoem, main]
+
 github:
   user_or_org: cryoem
-  repo_name: eman-meta-feedstock
+  repo_name: eman-dependencies-feedstock
