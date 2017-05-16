@@ -14,9 +14,9 @@ Summary: Meta-package for eman2 dependencies
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/cryoem/eman-meta-feedstock.svg?style=shield)](https://circleci.com/gh/cryoem/eman-meta-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/cryoem/eman-meta-feedstock.svg?branch=master)](https://travis-ci.org/cryoem/eman-meta-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/cryoem/eman-meta-feedstock?svg=True)](https://ci.appveyor.com/project/cryoem/eman-meta-feedstock/branch/master)
+Linux: [![Circle CI](https://circleci.com/gh/cryoem/eman-dependencies-feedstock.svg?style=shield)](https://circleci.com/gh/cryoem/eman-dependencies-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/cryoem/eman-dependencies-feedstock.svg?branch=master)](https://travis-ci.org/cryoem/eman-dependencies-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/cryoem/eman-dependencies-feedstock?svg=True)](https://ci.appveyor.com/project/cryoem/eman-dependencies-feedstock/branch/master)
 
 Current release info
 ====================
