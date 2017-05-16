@@ -1,5 +1,5 @@
-About eman-meta
-===============
+About eman-dependencies
+=======================
 
 Home: 
 
@@ -20,44 +20,44 @@ Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/cryoem/
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/cryoem/eman-meta/badges/version.svg)](https://anaconda.org/cryoem/eman-meta)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/cryoem/eman-meta/badges/downloads.svg)](https://anaconda.org/cryoem/eman-meta)
+Version: [![Anaconda-Server Badge](https://anaconda.org/cryoem/eman-dependencies/badges/version.svg)](https://anaconda.org/cryoem/eman-dependencies)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/cryoem/eman-dependencies/badges/downloads.svg)](https://anaconda.org/cryoem/eman-dependencies)
 
-Installing eman-meta
-====================
+Installing eman-dependencies
+============================
 
-Installing `eman-meta` from the `cryoem` channel can be achieved by adding `cryoem` to your channels with:
+Installing `eman-dependencies` from the `cryoem` channel can be achieved by adding `cryoem` to your channels with:
 
 ```
 conda config --add channels cryoem
 ```
 
-Once the `cryoem` channel has been enabled, `eman-meta` can be installed with:
+Once the `cryoem` channel has been enabled, `eman-dependencies` can be installed with:
 
 ```
-conda install eman-meta
+conda install eman-dependencies
 ```
 
-It is possible to list all of the versions of `eman-meta` available on your platform with:
+It is possible to list all of the versions of `eman-dependencies` available on your platform with:
 
 ```
-conda search eman-meta --channel cryoem
+conda search eman-dependencies --channel cryoem
 ```
 
 
 
 
-Updating eman-meta-feedstock
-============================
+Updating eman-dependencies-feedstock
+====================================
 
-If you would like to improve the eman-meta recipe or build a new
+If you would like to improve the eman-dependencies recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `cryoem` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `cryoem` channel.
-Note that all branches in the cryoem/eman-meta-feedstock are
+Note that all branches in the cryoem/eman-dependencies-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.

@@ -1,5 +1,5 @@
 package:
-    name: eman-meta
+    name: eman-dependencies
     version: '1.0'
 
 requirements:
