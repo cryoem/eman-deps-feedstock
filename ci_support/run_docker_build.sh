@@ -58,47 +58,19 @@ conda clean --lock
 conda install --yes --quiet conda-forge-build-setup
 source run_conda_forge_build_setup
 
-# Embarking on 6 case(s).
-    set -x
-    export CONDA_NPY=110
-    export CONDA_PY=27
-    set +x
-    conda build --numpy 1.10 /recipe_root --quiet || exit 1
-    upload_or_check_non_existence /recipe_root cryoem --channel=main || exit 1
-
+# Embarking on 2 case(s).
     set -x
     export CONDA_NPY=111
     export CONDA_PY=27
     set +x
-    conda build --numpy 1.11 /recipe_root --quiet || exit 1
+    conda build /recipe_root --quiet || exit 1
     upload_or_check_non_existence /recipe_root cryoem --channel=main || exit 1
 
     set -x
     export CONDA_NPY=112
     export CONDA_PY=27
     set +x
-    conda build --numpy 1.12 /recipe_root --quiet || exit 1
-    upload_or_check_non_existence /recipe_root cryoem --channel=main || exit 1
-
-    set -x
-    export CONDA_NPY=17
-    export CONDA_PY=27
-    set +x
-    conda build --numpy 1.7 /recipe_root --quiet || exit 1
-    upload_or_check_non_existence /recipe_root cryoem --channel=main || exit 1
-
-    set -x
-    export CONDA_NPY=18
-    export CONDA_PY=27
-    set +x
-    conda build --numpy 1.8 /recipe_root --quiet || exit 1
-    upload_or_check_non_existence /recipe_root cryoem --channel=main || exit 1
-
-    set -x
-    export CONDA_NPY=19
-    export CONDA_PY=27
-    set +x
-    conda build --numpy 1.9 /recipe_root --quiet || exit 1
+    conda build /recipe_root --quiet || exit 1
     upload_or_check_non_existence /recipe_root cryoem --channel=main || exit 1
 touch /feedstock_root/build_artefacts/conda-forge-build-done
 EOF
