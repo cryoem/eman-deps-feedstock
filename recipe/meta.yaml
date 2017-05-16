@@ -22,13 +22,21 @@ requirements:
             "libtiff",
             "libpng >=1.6.*",
             "zlib",
+            "szip",  # [win]
+            "bsddb",  # [not win]
+            "matplotlib",
+            "ipython",
+            "pyqt 4.*",
+            "pyopengl 3.1.0",
+            "theano",
+            "scikit-learn",
+            "pydusa",  # [not win]
+            "msinttypes",  # [win]
+            "szip",  # [win]
+            "cmake"
     ] %}
     
     build:
-        - cmake
-        - szip  # [win]
-        - msinttypes  # [win]
-        
         {% for req in reqs_common %}
         - {{ req }}
         {% endfor %}
@@ -37,16 +45,6 @@ requirements:
         {% for req in reqs_common %}
         - {{ req }}
         {% endfor %}
-        
-        - szip  # [win]
-        - bsddb  # [not win]
-        - matplotlib
-        - ipython
-        - pyqt 4.*
-        - pyopengl 3.1.0
-        - theano
-        - scikit-learn
-        - pydusa  # [not win]
 
 about:
   summary: Meta-package for eman2 dependencies
