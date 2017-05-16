@@ -16,6 +16,7 @@ requirements:
             "gsl",
             "hdf5",
             "jpeg",
+            "libgfortran 1.0",
             "libtiff",
             "libpng >=1.6.*",
             "zlib",
