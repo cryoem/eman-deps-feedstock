@@ -10,14 +10,6 @@ channels:
   targets:
   - [cryoem, main]
 
-matrix:
-  - [[CONDA_NPY,  "17"]]
-  - [[CONDA_NPY,  "18"]]
-  - [[CONDA_NPY,  "19"]]
-  - [[CONDA_NPY, "110"]]
-  - [[CONDA_NPY, "111"]]
-  - [[CONDA_NPY, "112"]]
-
 github:
   user_or_org: cryoem
   repo_name: eman-dependencies-feedstock
