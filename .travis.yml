@@ -9,6 +9,10 @@ osx_image: xcode6.4
 env:
   matrix:
     
+    - CONDA_NPY=17  CONDA_PY=27
+    - CONDA_NPY=18  CONDA_PY=27
+    - CONDA_NPY=19  CONDA_PY=27
+    - CONDA_NPY=110  CONDA_PY=27
     - CONDA_NPY=111  CONDA_PY=27
     - CONDA_NPY=112  CONDA_PY=27
   global:
@@ -54,6 +58,7 @@ install:
       conda config --set show_channel_urls true
       conda install --yes --quiet conda-forge-build-setup
       source run_conda_forge_build_setup
+      conda update conda-build
 
 script:
   - conda build ./recipe
