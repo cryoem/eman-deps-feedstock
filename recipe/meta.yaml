@@ -1,9 +1,9 @@
 package:
     name: eman-deps
-    version: '1.0'
+    version: '2.0'
 
 build:
-    number: 1
+    number: 0
     skip: True  # [win32]
 
 requirements:
