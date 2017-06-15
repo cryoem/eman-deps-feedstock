@@ -2,17 +2,22 @@ package:
     name: eman-dependencies
     version: '1.0'
 
+build:
+    number: 1
+    skip: True  # [win32]
+
 requirements:
     {% set reqs_common = [
             "python 2.7.*",
             "boost 1.61.*",
             "fftw-mpi",
-            "numpy 1.8.*",
+            "numpy x.x",
             "ftgl",
             "freetype",
             "gsl",
             "hdf5",
             "jpeg",
+            "libgfortran 1.0",
             "libtiff",
             "libpng >=1.6.*",
             "zlib",
