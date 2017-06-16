@@ -91,6 +91,7 @@ set +e
     conda build /recipe_root --quiet || exit 1
     upload_or_check_non_existence /recipe_root cryoem --channel=main || exit 1
 
+# Embarking on 2 case(s).
     set -x
     export CONDA_NPY=111
     export CONDA_PY=27
