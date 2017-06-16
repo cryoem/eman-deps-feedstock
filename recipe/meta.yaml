@@ -3,7 +3,7 @@ package:
     version: '1.0'
 
 build:
-    number: 0
+    number: 1
     skip: True  # [win32]
 
 requirements:
@@ -28,6 +28,7 @@ requirements:
             "pyopengl 3.1.0",
             "theano",
             "scikit-learn",
+            "openmpi",
             "pydusa",  # [not win]
             "msinttypes",  # [win]
             "szip",  # [win]
