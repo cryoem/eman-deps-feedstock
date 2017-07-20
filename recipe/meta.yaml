@@ -31,7 +31,6 @@ requirements:
             "openmpi",
             "pydusa",  # [not win]
             "msinttypes",  # [win]
-            "szip",  # [win]
             "cmake"
     ] %}
     
