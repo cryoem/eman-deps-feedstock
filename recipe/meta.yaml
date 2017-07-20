@@ -12,6 +12,7 @@ requirements:
             "boost 1.63.*",
             "fftw-mpi",
             "numpy x.x",
+            "libgfortran 1.*",  # [np<19]
             "ftgl",
             "freetype",
             "gsl",
