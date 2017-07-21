@@ -29,7 +29,7 @@ requirements:
             "pyopengl 3.1.0",
             "theano",
             "scikit-learn",
-            "openmpi",
+            "openmpi",  # [not win]
             "pydusa",  # [not win]
             "msinttypes",  # [win]
             "cmake"
