@@ -9,7 +9,8 @@ requirements:
     {% set reqs_common = [
             "python 2.7.*",
             "boost 1.63.*",
-            "fftw-mpi",
+            "fftw-mpi",   # [not win]
+            "fftw",       # [win]
             "numpy x.x",  # [not win]
             "numpy",      # [win]
             "libgfortran 1.*",  # [np<19 and linux]
