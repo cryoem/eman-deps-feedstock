@@ -4,7 +4,6 @@ package:
 
 build:
     number: 0
-    skip: True  # [win32]
 
 requirements:
     {% set reqs_common = [
