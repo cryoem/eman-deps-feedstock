@@ -4,15 +4,16 @@ package:
 
 build:
     number: 0
-    skip: True  # [win32]
 
 requirements:
     {% set reqs_common = [
             "python 2.7.*",
             "boost 1.63.*",
-            "fftw-mpi",
-            "numpy x.x",
-            "libgfortran 1.*",  # [np<19]
+            "fftw-mpi",   # [not win]
+            "fftw",       # [win]
+            "numpy x.x",  # [not win]
+            "numpy",      # [win]
+            "libgfortran 1.*",  # [np<19 and linux]
             "ftgl",
             "freetype",
             "gsl",
@@ -21,7 +22,6 @@ requirements:
             "libtiff",
             "libpng",
             "zlib",
-            "szip",  # [win]
             "bsddb",  # [not win]
             "matplotlib",
             "ipython",
@@ -29,7 +29,7 @@ requirements:
             "pyopengl 3.1.0",
             "theano",
             "scikit-learn",
-            "openmpi",
+            "openmpi",  # [not win]
             "pydusa",  # [not win]
             "msinttypes",  # [win]
             "cmake"
