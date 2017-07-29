@@ -32,8 +32,8 @@ requirements:
             "openmpi",  # [not win]
             "pydusa",  # [not win]
             "msinttypes",  # [win]
-            "cmake >=3.8.*" # [not linux]
-            "cmake 3.7.*"   # [linux]
+            "cmake >=3.8.*",  # [not linux]
+            "cmake 3.7.*",    # [linux]
     ] %}
     
     build:
