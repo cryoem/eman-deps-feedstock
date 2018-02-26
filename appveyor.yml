@@ -45,6 +45,7 @@ install:
     # Configure the VM.
     - cmd: conda.exe install -n root --quiet --yes conda-forge-build-setup
     - cmd: run_conda_forge_build_setup
+    - cmd: conda.exe install -n root --quiet --yes anaconda-client=1.6.9
 
 # Skip .NET project specific build phase.
 build: off

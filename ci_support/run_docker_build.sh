@@ -58,6 +58,7 @@ conda clean --lock
 
 conda install --yes --quiet conda-forge-build-setup
 source run_conda_forge_build_setup
+conda install -n root --quiet --yes anaconda-client=1.6.9
 
 conda build /recipe_root --quiet || exit 1
 upload_or_check_non_existence /recipe_root cryoem --channel=dev || exit 1
