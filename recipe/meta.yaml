@@ -1,37 +1,41 @@
 package:
     name: eman-deps
-    version: '7.0'
+    version: '8.0'
 
 build:
     number: 0
+    skip: True  # [win32]
 
 requirements:
     {% set reqs_common = [
-            "python 2.7.*",
-            "boost 1.63.*",
-            "fftw-mpi",   # [not win]
-            "fftw",       # [win]
-            "numpy x.x",  # [not win]
-            "numpy",      # [win]
-            "libgfortran 1.*",  # [np<19 and linux]
-            "ftgl",
-            "freetype",
-            "gsl",
-            "hdf5",
-            "jpeg",
-            "libtiff",
-            "libpng",
-            "zlib",
-            "bsddb",  # [not win]
-            "matplotlib",
-            "ipython",
-            "pyqt 4.*",
-            "pyopengl 3.1.0",
-            "theano",
-            "scikit-learn",
-            "openmpi",  # [not win]
-            "pydusa",  # [not win]
             "msinttypes",  # [win]
+            "python 2.7.14",
+            "boost 1.63.*",
+            "fftw-mpi",
+            "numpy 1.13.*",
+            "ftgl",
+            "freetype 2.8.*",  # [osx]
+            "freetype 2.7.*",  # [not osx]
+            "gsl",
+            "hdf5 1.8.18",
+            "jpeg",
+            "libtiff 4.0.9",             # [not win]
+            "libtiff 4.0.9 hafacce9_0",  # [win]
+            "libpng 1.6.34",
+            "zlib",
+            "matplotlib 2.1.*",  # [osx]
+            "matplotlib 1.5.*",  # [not osx]
+            "scipy 1.*",
+            "ipython",
+            "pyqt 4.11.*",
+            "qt >=4.8.6",
+            "pyopengl 3.1.0",
+            "theano 1.0.*",
+            "scikit-learn 0.19.*",
+            "bsddb",          # [not win]
+            "openmpi 2.0.2",  # [not win]
+            "pydusa",         # [not win]
+            "nose",
     ] %}
     
     build:

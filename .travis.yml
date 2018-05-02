@@ -9,16 +9,10 @@ osx_image: xcode6.4
 env:
   matrix:
     
-    - CONDA_NPY=17  CONDA_PY=27
-    - CONDA_NPY=18  CONDA_PY=27
-    - CONDA_NPY=19  CONDA_PY=27
-    - CONDA_NPY=110  CONDA_PY=27
-    - CONDA_NPY=111  CONDA_PY=27
-    - CONDA_NPY=112  CONDA_PY=27
-    - CONDA_NPY=113  CONDA_PY=27
+    - CONDA_PY=27
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
-    - secure: "XUi4O2kWQz9Qo3B3RLOiP+LYXvT/l4+I4cKPTiwtsVFyxRxPAwV5IHYWycwQ1XrGl/zZEnBDFHxzTzJQVH3hwL5MS51F1iVI7yeoDdFtJQ8SHMyDUP/wjktohcAtqIzSMuN4faoqFF3ziwlcLYCez1cMNHB4Qlgx/8J8PfEvCrLWvnFeFWi4SP3S6hXcSyqEhjbJhl7UohRWHYr9fxgb7j3xetDgNS5w8lTcXn9QxKrk0lSNqCOCI2FFanvEJhm5Zbi1l9olG8A9g4dlBF8BP0Sk7z1BYfysptrDvxczs6ZAQI6tT0sQ+Ki6hrsp1s6hA1TDUDfJ7c81V3QAxLNMkyNXw00/wi3dd4j0OL3WVFnkN5pcOsWUKfovMZA8dbOGD//FZdoCXKF2zwNYHprZiceqCR5yf141eL56zhl2Nmwlxp2cCbaFwzMKq0gL46ZJJa0Uj8KzREurSwS+DN88lzXplZgSKOIJJXH5kIcdnL0jo2HC8ZzjuQZMz1SwlJUgVwYzLz9JSFi6UaBwRu+wKRn8tRf+IbmkMiO5uFOJniBMwyfRzRmzaUtfwbFJDNr7qmLUDDCj/UBRVTCfankV62VhXYpDsawRcEJyaEbHjiY6SfUWwZdMD7oxu14TkMhhu26Jzbfr4ITzqOl9h1dONZFcmxFCIdC54bXABXpHy4s="
+    - secure: "D7dDSGjlvGbPM53kxCvFIYUXSF6ChMKUGPtuMg/GB6So+bBeb35dBtIRubjfJVUmcd5ROxqJt7Cn/UpIFDuWPrV6zn8ZPBtapH2hM1EHHzanTzfW/0gaQSkRLpAG+IFJc5CZ3laXsZ3QvCuTNkgbEeAIpTZ/Zn5nyltV8wPGg1QZdOhb012hQpwQGi7TGrNJUbaR7yeyzObfACT+UIvujP+RAiZXbwOLnkcYPtYhTWXkPVVc+lDuWleFLciyxCDaj+2PhVBpkfVNuL0eAAzHcEgTrdO2Jjemo+ipcpCjR7eX2aSpsiDRyj/TkI/TLz/kP5WeKuV4WUt3rx9uSRNISov3oOudGGrJspPrYUXPzJxb0xmMld1Z/o/X+irIyFeCLnu2f2IekV4KCaJYfaH5ULrbc2U+KA8eNg+WH8WZXbyenJkrVrH3lhm/vd+oH3A5GFbHagLPVb+2DuWw6jl0O4AYamIsH9KDReX73kWxv/bVd2xW4w7Fk8jVD56J0Mmvd/c0s1PklWp925IqaUmZoryXy/cQO5dfXaaQNb2aUgnpCxDszXKNk8HNk5LG7rKwXXLLkregNq8lI7M9QBehZisXtmeeIjOET4BjCSqcrs5+FofKVTveswHQDLvQB8mS1c1+6o6fOEnCsGNnQuXCjBpHlaqErCBOy9Xic71Gk9s="
 
 
 before_install:
@@ -43,7 +37,7 @@ install:
       echo ""
       echo "Installing a fresh version of Miniconda."
       MINICONDA_URL="https://repo.continuum.io/miniconda"
-      MINICONDA_FILE="Miniconda3-latest-MacOSX-x86_64.sh"
+      MINICONDA_FILE="Miniconda3-4.3.31-MacOSX-x86_64.sh"
       curl -L -O "${MINICONDA_URL}/${MINICONDA_FILE}"
       bash $MINICONDA_FILE -b
 
@@ -59,6 +53,7 @@ install:
       conda config --set show_channel_urls true
       conda install --yes --quiet conda-forge-build-setup
       source run_conda_forge_build_setup
+      conda install -n root --quiet --yes anaconda-client=1.6.9
 
 script:
   - conda build ./recipe
