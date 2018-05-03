@@ -1,6 +1,6 @@
 package:
     name: eman-deps
-    version: '10.0'
+    version: '11.0'
 
 build:
     number: 0
