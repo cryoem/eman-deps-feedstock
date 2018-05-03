@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+echo
+echo "INFO: eman-deps activation script is making the following environmental changes:"
+
+set -x
+
 unset MACOSX_DEPLOYMENT_TARGET
 unset CC
 unset CFLAGS
@@ -19,3 +24,7 @@ unset GXX
 unset HOST
 unset LDFLAGS
 unset _PYTHON_SYSCONFIGDATA_NAME
+
+set +x
+
+echo
