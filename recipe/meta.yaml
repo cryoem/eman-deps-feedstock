@@ -36,6 +36,7 @@ requirements:
             "openmpi 2.0.2",  # [not win]
             "pydusa",         # [not win]
             "nose",
+            "future",
     ] %}
     
     build:
