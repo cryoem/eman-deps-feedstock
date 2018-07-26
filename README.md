@@ -14,14 +14,16 @@ Summary: Meta-package for eman2 dependencies
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/cryoem/eman-deps-feedstock.svg?style=shield)](https://circleci.com/gh/cryoem/eman-deps-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/cryoem/eman-deps-feedstock.svg?branch=master)](https://travis-ci.org/cryoem/eman-deps-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/cryoem/eman-deps-feedstock?svg=True)](https://ci.appveyor.com/project/cryoem/eman-deps-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/cryoem/eman-deps-feedstock/master.svg?label=Linux)](https://circleci.com/gh/cryoem/eman-deps-feedstock)
+[![OSX](https://img.shields.io/travis/cryoem/eman-deps-feedstock/master.svg?label=macOS)](https://travis-ci.org/cryoem/eman-deps-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/cryoem/eman-deps-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/cryoem/eman-deps-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/cryoem/eman-deps/badges/version.svg)](https://anaconda.org/cryoem/eman-deps)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/cryoem/eman-deps/badges/downloads.svg)](https://anaconda.org/cryoem/eman-deps)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-eman--deps-green.svg)](https://anaconda.org/cryoem/eman-deps) | [![Conda Downloads](https://img.shields.io/conda/dn/cryoem/eman-deps.svg)](https://anaconda.org/cryoem/eman-deps) | [![Conda Version](https://img.shields.io/conda/vn/cryoem/eman-deps.svg)](https://anaconda.org/cryoem/eman-deps) | [![Conda Platforms](https://img.shields.io/conda/pn/cryoem/eman-deps.svg)](https://anaconda.org/cryoem/eman-deps) |
 
 Installing eman-deps
 ====================

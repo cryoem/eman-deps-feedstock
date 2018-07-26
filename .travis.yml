@@ -8,8 +8,8 @@ osx_image: xcode6.4
 
 env:
   matrix:
-    
-    - CONDA_PY=27
+    - CONFIG=osx_
+
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
     - secure: "D7dDSGjlvGbPM53kxCvFIYUXSF6ChMKUGPtuMg/GB6So+bBeb35dBtIRubjfJVUmcd5ROxqJt7Cn/UpIFDuWPrV6zn8ZPBtapH2hM1EHHzanTzfW/0gaQSkRLpAG+IFJc5CZ3laXsZ3QvCuTNkgbEeAIpTZ/Zn5nyltV8wPGg1QZdOhb012hQpwQGi7TGrNJUbaR7yeyzObfACT+UIvujP+RAiZXbwOLnkcYPtYhTWXkPVVc+lDuWleFLciyxCDaj+2PhVBpkfVNuL0eAAzHcEgTrdO2Jjemo+ipcpCjR7eX2aSpsiDRyj/TkI/TLz/kP5WeKuV4WUt3rx9uSRNISov3oOudGGrJspPrYUXPzJxb0xmMld1Z/o/X+irIyFeCLnu2f2IekV4KCaJYfaH5ULrbc2U+KA8eNg+WH8WZXbyenJkrVrH3lhm/vd+oH3A5GFbHagLPVb+2DuWw6jl0O4AYamIsH9KDReX73kWxv/bVd2xW4w7Fk8jVD56J0Mmvd/c0s1PklWp925IqaUmZoryXy/cQO5dfXaaQNb2aUgnpCxDszXKNk8HNk5LG7rKwXXLLkregNq8lI7M9QBehZisXtmeeIjOET4BjCSqcrs5+FofKVTveswHQDLvQB8mS1c1+6o6fOEnCsGNnQuXCjBpHlaqErCBOy9Xic71Gk9s="
@@ -18,7 +18,7 @@ env:
 before_install:
     # Fast finish the PR.
     - |
-      (curl https://raw.githubusercontent.com/conda-forge/conda-forge-build-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
+      (curl https://raw.githubusercontent.com/conda-forge/conda-forge-ci-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
           python - -v --ci "travis" "${TRAVIS_REPO_SLUG}" "${TRAVIS_BUILD_NUMBER}" "${TRAVIS_PULL_REQUEST}") || exit 1
 
     # Remove homebrew.
@@ -37,7 +37,7 @@ install:
       echo ""
       echo "Installing a fresh version of Miniconda."
       MINICONDA_URL="https://repo.continuum.io/miniconda"
-      MINICONDA_FILE="Miniconda3-4.3.31-MacOSX-x86_64.sh"
+      MINICONDA_FILE="Miniconda3-latest-MacOSX-x86_64.sh"
       curl -L -O "${MINICONDA_URL}/${MINICONDA_FILE}"
       bash $MINICONDA_FILE -b
 
@@ -51,11 +51,10 @@ install:
       conda config --add channels defaults
       conda config --add channels cryoem
       conda config --set show_channel_urls true
-      conda install --yes --quiet conda-forge-build-setup
+      conda install --yes --quiet conda-forge-ci-setup=1
       source run_conda_forge_build_setup
-      conda install -n root --quiet --yes anaconda-client=1.6.9
 
 script:
-  - conda build ./recipe
+  - conda build ./recipe -m ./.ci_support/${CONFIG}.yaml
 
-  - upload_or_check_non_existence ./recipe cryoem --channel=dev
+  - upload_or_check_non_existence ./recipe cryoem --channel=dev -m ./.ci_support/${CONFIG}.yaml
