@@ -38,11 +38,6 @@ requirements:
             "future",
     ] %}
     
-    build:
-        {% for req in reqs_common %}
-        - {{ req }}
-        {% endfor %}
-    
     run:
         - {{ compiler('cxx') }}
         {% for req in reqs_common %}
