@@ -43,7 +43,6 @@ requirements:
     ] %}
     
     run:
-        - {{ compiler('cxx') }}
         {% for req in reqs_common %}
         - {{ req }}
         {% endfor %}
