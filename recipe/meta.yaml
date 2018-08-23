@@ -3,7 +3,7 @@ package:
     version: '13.2'
 
 build:
-    number: 0
+    number: 1
     skip: True  # [win32]
 
 requirements:
@@ -40,6 +40,7 @@ requirements:
             "pydusa",         # [not win]
             "nose",
             "future",
+            "configparser",
     ] %}
     
     run:
