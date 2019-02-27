@@ -41,6 +41,7 @@ requirements:
             "nose",
             "future",
             "configparser",
+            "tqdm",
     ] %}
     
     run:
