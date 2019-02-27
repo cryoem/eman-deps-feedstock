@@ -1,5 +1,8 @@
-pin_run_as_build:
-  python:
-    min_pin: x.x.x
-python:
-- 2.7.14
+build_number_decrement:
+- '0'
+channel_sources:
+- cryoem, defaults,conda-forge
+channel_targets:
+- cryoem dev
+docker_image:
+- condaforge/linux-anvil-comp7

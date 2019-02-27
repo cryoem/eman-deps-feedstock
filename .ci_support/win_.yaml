@@ -1,5 +1,4 @@
-pin_run_as_build:
-  python:
-    min_pin: x.x.x
-python:
-- 2.7.14
+channel_sources:
+- cryoem, defaults,conda-forge
+channel_targets:
+- cryoem dev
