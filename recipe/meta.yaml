@@ -39,6 +39,7 @@ requirements:
             "future",
             "configparser",
             "tqdm",
+            "libcxx 4.0.1 h579ed51_0", # [osx]
     ] %}
     
     run:
