@@ -13,3 +13,8 @@ channels:
 github:
   user_or_org: cryoem
   repo_name: eman-deps-feedstock
+
+provider:
+  linux: circle
+  osx: travis
+  win: appveyor
