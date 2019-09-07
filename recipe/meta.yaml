@@ -7,45 +7,39 @@ build:
     skip: True  # [win32]
 
 requirements:
-    {% set reqs_common = [
-            "msinttypes",  # [win]
-            "python 2.7.14",
-            "boost 1.63.*",
-            "fftw-mpi",
-            "numpy 1.13.*",
-            "ftgl",
-            "freetype ",
-            "gsl 2.4.*",
-            "hdf5 1.8.18",
-            "jpeg 9b",
-            "libtiff 4.0.9",             # [not win]
-            "libtiff 4.0.9 hafacce9_0",  # [win]
-            "libpng 1.6.34",
-            "zlib",
-            "matplotlib",
-            "scipy 1.*",
-            "ipython",
-            "tensorflow-gpu 1.5.*",  # [linux]
-            "cudatoolkit 8.0.*",     # [linux]
-            "cudnn 7.0.*",           # [linux]
-            "tensorflow 1.5.*",      # [osx]
-            "pyqt 5.*",
-            "pyopengl 3.1.0",
-            "scikit-learn 0.19.*",
-            "bsddb",          # [not win]
-            "openmpi 2.0.2",  # [not win]
-            "pydusa",         # [not win]
-            "nose",
-            "future",
-            "configparser",
-            "tqdm",
-            "libcxx 4.0.1 h579ed51_0", # [osx]
-    ] %}
-    
     run:
-        {% for req in reqs_common %}
-        - {{ req }}
-        {% endfor %}
+        - msinttypes                # [win]
+        - python 2.7.14
+        - boost 1.63.*
+        - fftw-mpi
+        - numpy 1.13.*
+        - ftgl
+        - freetype
+        - gsl 2.4.*
+        - hdf5 1.8.18
+        - jpeg 9b
+        - libtiff 4.0.9             # [not win]
+        - libtiff 4.0.9 hafacce9_0  # [win]
+        - libpng 1.6.34
+        - zlib
+        - matplotlib
+        - scipy 1.*
+        - ipython
+        - tensorflow-gpu 1.5.*      # [linux]
+        - cudatoolkit 8.0.*         # [linux]
+        - cudnn 7.0.*               # [linux]
+        - tensorflow 1.5.*          # [osx]
+        - pyqt 5.*
+        - pyopengl 3.1.0
+        - scikit-learn 0.19.*
+        - bsddb                     # [not win]
+        - openmpi 2.0.2             # [not win]
+        - pydusa                    # [not win]
+        - nose
+        - future
+        - configparser
+        - tqdm
+        - libcxx 4.0.1 h579ed51_0   # [osx]
     
     run_constrained:
         - cmake       3.9.*
