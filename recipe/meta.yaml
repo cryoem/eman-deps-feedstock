@@ -18,7 +18,7 @@ outputs:
       run:
         - msinttypes                        # [win]
         - python         2.7.14
-        - boost          1.63.*
+        - boost
         - fftw-mpi
         - numpy          1.13.*
         - ftgl
