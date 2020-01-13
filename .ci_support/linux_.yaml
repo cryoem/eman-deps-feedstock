@@ -1,15 +1,6 @@
 channel_sources:
 - cryoem, defaults,conda-forge
 channel_targets:
-- cryoem dev
+- cryoem main
 docker_image:
 - condaforge/linux-anvil-comp7
-freetype:
-- 2.9.1
-pin_run_as_build:
-  freetype:
-    max_pin: x
-  zlib:
-    max_pin: x.x
-zlib:
-- '1.2'
