@@ -7,7 +7,7 @@ environment:
 
   BINSTAR_TOKEN:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
-    secure: DytmJU8Iq1lbelvMvcsTjak25U7QPYCTMr8QmMzqRw21AmRfcLQhfuNPZtjH13q9
+    secure: hhS98dVbKVMiq1d7IEUyMCfA9Be1YSA2+BfDYf+1wwLYdOoWLWVaehGr6/mjqeAv
 
   matrix:
     - CONFIG: win_
