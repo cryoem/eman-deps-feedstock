@@ -36,7 +36,7 @@ outputs:
         - scikit-learn   0.19.*
         - bsddb                             # [not win]
         - openmpi        2.0.2              # [not win]
-        - pydusa                            # [not win]
+        - pydusa         1.15   *_11        # [not win]
         - nose
         - future
         - configparser
