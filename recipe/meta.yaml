@@ -8,14 +8,8 @@ build:
 
 requirements:
     run:
-        - {{ pin_subpackage('eman-deps-cli', exact=True) }}
         - pyqt           5.*
         - pyopengl       3.1.0
-
-outputs:
-  - name: eman-deps-cli
-    requirements:
-      run:
         - msinttypes                        # [win]
         - python         2.7.14
         - boost
@@ -43,7 +37,7 @@ outputs:
         - tqdm
         - libcxx         4.0.1  h579ed51_0  # [osx]
 
-      run_constrained:
+    run_constrained:
         - cmake          3.14.*
         - conda          4.6.14
         - conda-build    3.17.8
