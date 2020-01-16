@@ -13,7 +13,7 @@ requirements:
         - msinttypes                        # [win]
         - python         2.7.14
         - boost
-        - fftw-mpi
+        - fftw-mpi       3.3.6  *_3         # [win]
         - numpy          1.13.*
         - ftgl
         - freetype
@@ -29,8 +29,7 @@ requirements:
         - ipython
         - scikit-learn   0.19.*
         - bsddb                             # [not win]
-        - openmpi        2.0.2              # [not win]
-        - pydusa                            # [not win]
+        - pydusa         1.15 openmpi{{ openmpi }}_12          # [not win]
         - nose
         - future
         - configparser
