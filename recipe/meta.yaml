@@ -1,4 +1,5 @@
 {% set build  = 1 %}
+{% set openmpi_ver  = 3 %}
 
 package:
     name: eman-deps
@@ -6,7 +7,7 @@ package:
 
 build:
     number: {{ build }}
-    string: openmpi{{ openmpi }}_{{ build }}  # [not win]
+    string: openmpi{{ openmpi_ver }}_{{ build }}  # [not win]
     skip: True  # [win32]
 
 requirements:
@@ -16,7 +17,7 @@ requirements:
         - msinttypes                        # [win]
         - python         2.7.*
         - boost
-        - fftw-mpi       3.3.6  *_3         # [win]
+        - fftw           3.3.8  nompi_*     # [win]
         - numpy          1.13.*
         - ftgl
         - freetype
@@ -32,7 +33,7 @@ requirements:
         - ipython
         - scikit-learn   0.19.*
         - bsddb                             # [not win]
-        - pydusa         1.15 openmpi{{ openmpi }}_12          # [not win]
+        - pydusa         1.15 openmpi{{ openmpi_ver }}_13          # [not win]
         - nose
         - future
         - configparser
