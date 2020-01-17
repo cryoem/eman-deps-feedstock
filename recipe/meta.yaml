@@ -1,9 +1,12 @@
+{% set build  = 0 %}
+
 package:
     name: eman-deps
     version: '16.0'
 
 build:
-    number: 0
+    number: {{ build }}
+    string: openmpi{{ openmpi }}_{{ build }}  # [not win]
     skip: True  # [win32]
 
 requirements:
