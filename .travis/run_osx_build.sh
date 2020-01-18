@@ -22,15 +22,12 @@ echo -en 'travis_fold:end:install_miniconda\\r'
 echo "Configuring conda." && echo -en 'travis_fold:start:configure_conda\\r'
 source ~/miniconda3/bin/activate root
 
-conda install -n root -c conda-forge --quiet --yes conda-forge-ci-setup=2 conda-build
+conda install -n root -c conda-forge --quiet --yes conda-forge-ci-setup=2 conda=4.6.14 conda-build=3.17.8
 mangle_compiler ./ ./recipe .ci_support/${CONFIG}.yaml
-CONDA_AUTO_UPDATE_CONDA=0 conda install -n root -c conda-forge --quiet --yes conda-forge-ci-setup=2 conda=4.6.14 conda-build=3.17.8
 setup_conda_rc ./ ./recipe ./.ci_support/${CONFIG}.yaml
 
 
 source run_conda_forge_build_setup
-
-
 echo -en 'travis_fold:end:configure_conda\\r'
 
 set -e
