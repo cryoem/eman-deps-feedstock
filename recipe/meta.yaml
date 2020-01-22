@@ -1,9 +1,9 @@
 package:
     name: eman-deps-dev
-    version: '18.0'
+    version: '18.1'
 
 build:
-    number: 0
+    number: 1
     skip: True  # [win32]
 
 requirements:
@@ -38,6 +38,10 @@ outputs:
         - matplotlib    >3.0.0
         - scipy          1.*
         - ipython
+        - tensorflow-gpu 1.5.*              # [linux]
+        - cudatoolkit    8.0.*              # [linux]
+        - cudnn          7.0.*              # [linux]
+        - tensorflow     1.5.*              # [osx]
         - scikit-learn   0.19.*
         - bsddb3                            # [not win]
         - pydusa         1.15 openmpi3_14   # [not win]
