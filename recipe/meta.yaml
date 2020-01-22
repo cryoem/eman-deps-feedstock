@@ -1,21 +1,29 @@
-{% set build  = 2 %}
-{% set openmpi_ver  = 3 %}
-
 package:
-    name: eman-deps
-    version: '16.0'
+    name: eman-deps-dev
+    version: '18.0'
 
 build:
-    number: {{ build }}
-    string: openmpi{{ openmpi_ver }}_{{ build }}  # [not win]
+    number: 0
     skip: True  # [win32]
 
 requirements:
     run:
+      - {{ pin_subpackage('eman-deps', exact=True) }}
+      - cmake            3.14.*
+      - boost            1.66.*
+
+outputs:
+  - name: eman-deps
+    requirements:
+      run:
+        - {{ pin_subpackage('eman-deps-cli', exact=True) }}
         - pyqt           5.*
         - pyopengl       3.1.0
-        - msinttypes                        # [win]
-        - python         2.7.*
+
+  - name: eman-deps-cli
+    requirements:
+      run:
+        - python         3.6.*
         - boost
         - fftw           3.3.8  nompi_*     # [win]
         - numpy          1.13.*
@@ -23,23 +31,22 @@ requirements:
         - freetype
         - gsl            2.4.*
         - hdf5           1.8.18
-        - jpeg           9b
-        - libtiff        4.0.9              # [not win]
-        - libtiff        4.0.9  hafacce9_0  # [win]
+        - jpeg
+        - libtiff        4.0.9
         - libpng         1.6.37
         - zlib
-        - matplotlib
+        - matplotlib    >3.0.0
         - scipy          1.*
         - ipython
         - scikit-learn   0.19.*
-        - bsddb                             # [not win]
-        - pydusa         1.15 openmpi{{ openmpi_ver }}_13          # [not win]
+        - bsddb3                            # [not win]
+        - pydusa         1.15 openmpi3_14   # [not win]
         - nose
         - future
         - configparser
         - tqdm
 
-    run_constrained:
+      run_constrained:
         - cmake          3.14.*
         - conda          4.6.14
         - conda-build    3.17.8
