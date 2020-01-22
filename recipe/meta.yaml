@@ -1,13 +1,9 @@
-{% set build  = 2 %}
-{% set openmpi_ver  = 3 %}
-
 package:
     name: eman-deps-dev
     version: '16.0'
 
 build:
-    number: {{ build }}
-    string: openmpi{{ openmpi_ver }}_{{ build }}  # [not win]
+    number: 2
     skip: True  # [win32]
 
 requirements:
@@ -44,7 +40,7 @@ outputs:
         - ipython
         - scikit-learn   0.19.*
         - bsddb3                            # [not win]
-        - pydusa         1.15 openmpi{{ openmpi_ver }}_14          # [not win]
+        - pydusa         1.15 openmpi3_14   # [not win]
         - nose
         - future
         - configparser
