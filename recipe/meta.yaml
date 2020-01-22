@@ -14,8 +14,7 @@ requirements:
     run:
         - pyqt           5.*
         - pyopengl       3.1.0
-        - msinttypes                        # [win]
-        - python         2.7.*
+        - python         3.6.*
         - boost
         - fftw           3.3.8  nompi_*     # [win]
         - numpy          1.13.*
@@ -23,17 +22,16 @@ requirements:
         - freetype
         - gsl            2.4.*
         - hdf5           1.8.18
-        - jpeg           9b
-        - libtiff        4.0.9              # [not win]
-        - libtiff        4.0.9  hafacce9_0  # [win]
+        - jpeg
+        - libtiff        4.0.9
         - libpng         1.6.37
         - zlib
-        - matplotlib
+        - matplotlib    >3.0.0
         - scipy          1.*
         - ipython
         - scikit-learn   0.19.*
-        - bsddb                             # [not win]
-        - pydusa         1.15 openmpi{{ openmpi_ver }}_13          # [not win]
+        - bsddb3                            # [not win]
+        - pydusa         1.15 openmpi{{ openmpi_ver }}_14          # [not win]
         - nose
         - future
         - configparser
