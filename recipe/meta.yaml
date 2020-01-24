@@ -38,10 +38,10 @@ outputs:
         - matplotlib    >3.0.0
         - scipy          1.*
         - ipython
-        - tensorflow-gpu 1.5.*              # [linux]
+        - tensorflow-gpu 2.*                # [linux]
         - cudatoolkit    8.0.*              # [linux]
         - cudnn          7.0.*              # [linux]
-        - tensorflow     1.5.*              # [osx]
+        - tensorflow     2.*                # [osx]
         - scikit-learn   0.19.*
         - bsddb3                            # [not win]
         - pydusa         1.15 openmpi3_14   # [not win]
