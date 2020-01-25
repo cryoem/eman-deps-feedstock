@@ -1,5 +1,5 @@
 package:
-    name: eman-deps-dev
+    name: eman-deps
     version: '18.1'
 
 build:
@@ -8,21 +8,10 @@ build:
 
 requirements:
     run:
-      - {{ pin_subpackage('eman-deps', exact=True) }}
-      - cmake            3.14.*
-      - boost            1.66.*
-
-outputs:
-  - name: eman-deps
-    requirements:
-      run:
-        - {{ pin_subpackage('eman-deps-cli', exact=True) }}
+        - cmake            3.14.*
+        - boost            1.66.*
         - pyqt           5.*
         - pyopengl       3.1.0
-
-  - name: eman-deps-cli
-    requirements:
-      run:
         - python         3.6.*
         - boost
         - fftw           3.3.8  nompi_*     # [win]
@@ -50,7 +39,7 @@ outputs:
         - configparser
         - tqdm
 
-      run_constrained:
+    run_constrained:
         - cmake          3.14.*
         - conda          4.6.14
         - conda-build    3.17.8
