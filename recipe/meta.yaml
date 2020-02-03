@@ -9,40 +9,39 @@ build:
 requirements:
     run:
       - cmake            3.14.*
-      - boost            1.66.*
-        - pyqt           5.*
-        - pyopengl       3.1.0
-        - python         3.6.*
-        - boost
-        - fftw           3.3.8  nompi_*     # [win]
-        - numpy          1.13.*
-        - ftgl
-        - freetype
-        - gsl            2.4.*
-        - hdf5           1.8.18
-        - jpeg
-        - libtiff        4.0.9
-        - libpng         1.6.37
-        - zlib
-        - matplotlib    >3.0.0
-        - scipy          1.*
-        - ipython
-        - tensorflow-gpu 1.5.*              # [linux]
-        - cudatoolkit    8.0.*              # [linux]
-        - cudnn          7.0.*              # [linux]
-        - tensorflow     1.5.*              # [osx]
-        - scikit-learn   0.19.*
-        - bsddb3                            # [not win]
-        - pydusa         1.15 openmpi3_14   # [not win]
-        - nose
-        - future
-        - configparser
-        - tqdm
+      - pyqt           5.*
+      - pyopengl       3.1.0
+      - python         3.6.*
+      - boost
+      - fftw           3.3.8  nompi_*     # [win]
+      - numpy          1.13.*
+      - ftgl
+      - freetype
+      - gsl            2.4.*
+      - hdf5           1.8.18
+      - jpeg
+      - libtiff        4.0.9
+      - libpng         1.6.37
+      - zlib
+      - matplotlib    >3.0.0
+      - scipy          1.*
+      - ipython
+      - tensorflow-gpu 1.5.*              # [linux]
+      - cudatoolkit    8.0.*              # [linux]
+      - cudnn          7.0.*              # [linux]
+      - tensorflow     1.5.*              # [osx]
+      - scikit-learn   0.19.*
+      - bsddb3                            # [not win]
+      - pydusa         1.15 openmpi3_14   # [not win]
+      - nose
+      - future
+      - configparser
+      - tqdm
 
-      run_constrained:
-        - cmake          3.14.*
-        - conda          4.6.14
-        - conda-build    3.17.8
+    run_constrained:
+      - cmake          3.14.*
+      - conda          4.6.14
+      - conda-build    3.17.8
 
 about:
   summary: Meta-package for eman2 dependencies
