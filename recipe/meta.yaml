@@ -1,9 +1,12 @@
+{% set build  = 1 %}
+
 package:
     name: eman-deps-dev
     version: '18.1'
 
 build:
-    number: 1
+    number: {{ build }}
+    string: numpy{{ numpy }}_{{ build }}
     skip: True  # [win32]
 
 requirements:
@@ -11,10 +14,10 @@ requirements:
       - cmake            3.14.*
       - pyqt           5.*
       - pyopengl       3.1.0
-      - python         3.6.*
+      - python         3.7.*
       - boost
       - fftw           3.3.8  nompi_*     # [win]
-      - numpy          1.13.*
+      - numpy          {{ numpy }}
       - ftgl
       - freetype
       - gsl            2.4.*
@@ -32,7 +35,7 @@ requirements:
       - tensorflow     1.5.*              # [osx]
       - scikit-learn   0.19.*
       - bsddb3                            # [not win]
-      - pydusa         1.15 openmpi3_14   # [not win]
+      - pydusa         1.15 numpy{{ numpy }}_15   # [not win]
       - nose
       - future
       - configparser
