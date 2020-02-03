@@ -10,7 +10,13 @@ environment:
     secure: hhS98dVbKVMiq1d7IEUyMCfA9Be1YSA2+BfDYf+1wwLYdOoWLWVaehGr6/mjqeAv
 
   matrix:
-    - CONFIG: win_
+    - CONFIG: win_numpy1.15
+      CONDA_INSTALL_LOCN: C:\Miniconda36-x64
+
+    - CONFIG: win_numpy1.16
+      CONDA_INSTALL_LOCN: C:\Miniconda36-x64
+
+    - CONFIG: win_numpy1.17
       CONDA_INSTALL_LOCN: C:\Miniconda36-x64
 
 
@@ -38,7 +44,7 @@ install:
 
     # Configure the VM.
     # Tell conda we want an updated version of conda-forge-ci-setup and conda-build
-    - cmd: conda.exe install -n root -c conda-forge --quiet --yes conda-forge-ci-setup=2 conda=4.6.14 conda-build=3.17.8
+    - cmd: conda.exe install -n root -c conda-forge --quiet --yes conda-forge-ci-setup=2 conda-build
     - cmd: setup_conda_rc .\ .\recipe .\.ci_support\%CONFIG%.yaml
     
 

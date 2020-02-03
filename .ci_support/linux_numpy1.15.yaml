@@ -2,3 +2,7 @@ channel_sources:
 - cryoem, defaults,conda-forge
 channel_targets:
 - cryoem main
+docker_image:
+- condaforge/linux-anvil-comp7
+numpy:
+- '1.15'
