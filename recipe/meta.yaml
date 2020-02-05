@@ -15,7 +15,7 @@ requirements:
       - pyqt           5.*
       - pyopengl       3.1.5
       - python         3.7.*
-      - boost
+      - boost        >=1.68
       - fftw           3.3.8  nompi_*     # [win]
       - numpy          {{ numpy }}
       - ftgl
