@@ -3,6 +3,5 @@ channel_sources:
 channel_targets:
 - cryoem main
 numpy:
-  - 1.15
   - 1.16
   - 1.17
