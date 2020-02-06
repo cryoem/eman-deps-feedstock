@@ -10,9 +10,6 @@ environment:
     secure: hhS98dVbKVMiq1d7IEUyMCfA9Be1YSA2+BfDYf+1wwLYdOoWLWVaehGr6/mjqeAv
 
   matrix:
-    - CONFIG: win_numpy1.15
-      CONDA_INSTALL_LOCN: C:\Miniconda36-x64
-
     - CONFIG: win_numpy1.16
       CONDA_INSTALL_LOCN: C:\Miniconda36-x64
 
