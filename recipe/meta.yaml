@@ -11,40 +11,41 @@ build:
 
 requirements:
     run:
-      - cmake            3.14.*
-      - pyqt           5.*
-      - pyopengl       3.1.5
-      - python         3.7.*
-      - boost        >=1.68
-      - fftw           3.3.8  nompi_*     # [win]
-      - numpy          {{ numpy }}
-      - ftgl
-      - freetype
-      - gsl            2.4.*
-      - hdf5           1.8.18
-      - jpeg
-      - libtiff        4.0.9
-      - libpng         1.6.37
-      - zlib
-      - matplotlib    >3.0.0
-      - scipy          1.*
-      - ipython
-      - scikit-learn
-      - tensorflow-gpu 2.*                # [linux]
-      - cudatoolkit                       # [linux]
-      - cudnn                             # [linux]
-      - tensorflow     2.*                # [osx]
-      - bsddb3                            # [not win]
-      - pydusa         1.15 numpy{{ numpy }}_15   # [not win]
-      - nose
-      - future
-      - configparser
-      - tqdm
+        - cmake            3.14.*
+        - pyqt           5.*
+        - pyopengl       3.1.5
+        - matplotlib    >3.0.0
+        - scipy          1.*
+        - ipython
+        - scikit-learn
+        - tensorflow-gpu 2.*                # [linux]
+        - cudatoolkit                       # [linux]
+        - cudnn                             # [linux]
+        - tensorflow     2.*                # [osx]
+        - bsddb3                            # [not win]
+        - pydusa         1.15 numpy{{ numpy }}_15   # [not win]
+        - nose
+        - future
+        - configparser
+        - tqdm
+        - python         3.7.*
+        - boost        >=1.68
+        - fftw           3.3.8  mpi_openmpi_*  # [not win]
+        - fftw           3.3.8  nompi_*        # [win]
+        - numpy          {{ numpy }}
+        - ftgl
+        - freetype
+        - gsl            2.4.*
+        - hdf5           1.8.18
+        - jpeg
+        - libtiff        4.0.9
+        - libpng         1.6.37
+        - zlib
 
     run_constrained:
-      - cmake          3.14.*
-      - conda          4.6.14
-      - conda-build    3.17.8
+        - cmake          3.14.*
+        - conda          4.6.14
+        - conda-build    3.17.8
 
 about:
   summary: Meta-package for eman2 dependencies
