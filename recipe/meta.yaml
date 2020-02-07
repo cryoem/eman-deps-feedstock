@@ -30,6 +30,10 @@ requirements:
       - scipy          1.*
       - ipython
       - scikit-learn
+      - tensorflow-gpu 1.5.*              # [linux]
+      - cudatoolkit    8.0.*              # [linux]
+      - cudnn          7.0.*              # [linux]
+      - tensorflow     1.5.*              # [osx]
       - bsddb3                            # [not win]
       - pydusa         1.15 numpy{{ numpy }}_15   # [not win]
       - nose
