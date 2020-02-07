@@ -1,4 +1,5 @@
 {% set build  = 1 %}
+{% set numpy_ver  = 1.17 %}
 
 package:
     name: eman-deps-dev
@@ -6,7 +7,7 @@ package:
 
 build:
     number: {{ build }}
-    string: numpy{{ numpy }}_{{ build }}
+    string: numpy{{ numpy_ver }}_{{ build }}
     skip: True  # [win32]
 
 requirements:
@@ -34,7 +35,7 @@ outputs:
         - ipython
         - scikit-learn
         - bsddb3                            # [not win]
-        - pydusa         1.15 numpy{{ numpy }}_15   # [not win]
+        - pydusa         1.15 numpy{{ numpy_ver }}_15   # [not win]
         - nose
         - future
         - configparser
@@ -47,7 +48,7 @@ outputs:
         - boost        >=1.68
         - fftw           3.3.8  mpi_openmpi_*  # [not win]
         - fftw           3.3.8  nompi_*        # [win]
-        - numpy          {{ numpy }}
+        - numpy          {{ numpy_ver }}
         - ftgl
         - freetype
         - gsl            2.4.*
