@@ -43,7 +43,9 @@ outputs:
     requirements:
       run:
         - python         3.7.*
-        - boost        >=1.68
+        - boost          1.69.*                # [not linux]
+        - boost          1.69.* *_0            # [linux]
+        - boost-cpp      1.69.* *_0            # [linux]
         - fftw           3.3.8  mpi_openmpi_*  # [not win]
         - fftw           3.3.8  nompi_*        # [win]
         - numpy          {{ numpy_ver }}
