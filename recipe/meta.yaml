@@ -1,4 +1,3 @@
-{% set build  = 1 %}
 {% set numpy_ver  = 1.17 %}
 
 package:
@@ -6,8 +5,7 @@ package:
     version: '19.0'
 
 build:
-    number: {{ build }}
-    string: numpy{{ numpy_ver }}_{{ build }}
+    number: 1
     skip: True  # [win32]
 
 requirements:
