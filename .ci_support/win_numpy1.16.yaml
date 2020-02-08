@@ -1,6 +1,0 @@
-channel_sources:
-- cryoem, defaults,conda-forge
-channel_targets:
-- cryoem main
-numpy:
-- '1.16'
