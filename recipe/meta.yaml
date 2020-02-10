@@ -2,10 +2,10 @@
 
 package:
     name: eman-deps-dev
-    version: '19.0'
+    version: '19.1'
 
 build:
-    number: 2
+    number: 0
     skip: True  # [win32]
 
 requirements:
