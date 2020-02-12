@@ -4,3 +4,18 @@ channel_targets:
 - cryoem main
 docker_image:
 - condaforge/linux-anvil-comp7
+freetype:
+- 2.9.1
+jpeg:
+- '9'
+numpy:
+- '1.14'
+pin_run_as_build:
+  freetype:
+    max_pin: x
+  jpeg:
+    max_pin: x
+  zlib:
+    max_pin: x.x
+zlib:
+- '1.2'

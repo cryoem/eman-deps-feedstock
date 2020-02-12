@@ -2,3 +2,18 @@ channel_sources:
 - cryoem, defaults,conda-forge
 channel_targets:
 - cryoem main
+freetype:
+- 2.9.1
+jpeg:
+- '9'
+numpy:
+- '1.14'
+pin_run_as_build:
+  freetype:
+    max_pin: x
+  jpeg:
+    max_pin: x
+  zlib:
+    max_pin: x.x
+zlib:
+- '1.2'
