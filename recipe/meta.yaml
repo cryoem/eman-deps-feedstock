@@ -34,7 +34,7 @@ requirements:
         - fftw           3.3.8  mpi_openmpi_*  # [not win]
         - fftw           3.3.8  nompi_*        # [win]
         - numpy          {{ numpy_ver }}
-        - ftgl
+        - ftgl           2.4.0
         - freetype
         - gsl            2.4.*
         - hdf5           1.8.18
