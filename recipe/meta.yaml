@@ -10,9 +10,24 @@ build:
 
 requirements:
     run:
+        - {{ pin_subpackage('eman-deps', exact=True) }}
         - cmake          3.14.*
+
+outputs:
+  - name: eman-deps
+    requirements:
+      run:
+        - {{ pin_subpackage('eman-deps-cli', exact=True) }}
         - pyqt           5.*
         - pyopengl       3.1.5
+
+      run_constrained:
+        - cmake          3.14.*
+
+  - name: eman-deps-cli
+    requirements:
+      run:
+        - {{ pin_subpackage('eman-deps-cxx', exact=True) }}
         - matplotlib    >3.0.0
         - scipy          1.*
         - ipython
@@ -23,6 +38,10 @@ requirements:
         - future
         - configparser
         - tqdm
+
+  - name: eman-deps-cxx
+    requirements:
+      run:
         - python         3.7.*
         - boost          1.69.*                # [not linux]
         - boost          1.69.* *_0            # [linux]
