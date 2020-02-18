@@ -2,7 +2,7 @@
 
 package:
     name: eman-deps-dev
-    version: '21.0'
+    version: '21.1'
 
 build:
     number: 0
