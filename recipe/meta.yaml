@@ -32,6 +32,10 @@ outputs:
         - scipy          1.*
         - ipython
         - scikit-learn
+        - tensorflow-gpu 2.*                # [linux]
+        - cudatoolkit                       # [linux]
+        - cudnn                             # [linux]
+        - tensorflow     2.*                # [osx]
         - bsddb3                            # [not win]
         - pydusa         1.15 numpy{{ numpy_ver }}_15   # [not win]
         - nose
