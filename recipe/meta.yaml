@@ -2,7 +2,7 @@
 
 package:
     name: eman-deps-dev
-    version: '21.0'
+    version: '21.1'
 
 build:
     number: 1
@@ -32,6 +32,10 @@ outputs:
         - scipy          1.*
         - ipython
         - scikit-learn
+        - tensorflow-gpu 2.*                # [linux]
+        - cudatoolkit                       # [linux]
+        - cudnn                             # [linux]
+        - tensorflow     2.*                # [osx]
         - bsddb3                            # [not win]
         - pydusa         1.15 *_16           # [not win]
         - nose
