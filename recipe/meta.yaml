@@ -32,7 +32,7 @@ outputs:
         - scipy          1.*
         - ipython
         - scikit-learn
-        - bsddb3                            # [not win]
+        - bsddb3
         - pydusa         1.15 *_16           # [not win]
         - nose
         - future
