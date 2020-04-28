@@ -2,7 +2,7 @@
 
 package:
     name: eman-deps-dev
-    version: '22.1'
+    version: '22.2'
 
 build:
     number: 3
@@ -37,7 +37,7 @@ outputs:
         - cudnn                             # [linux]
         - tensorflow     2.*                # [osx]
         - bsddb3
-        - pydusa         1.15 *_16           # [not win]
+        - pydusa         1.15 *_17           # [not win]
         - nose
         - future
         - configparser
