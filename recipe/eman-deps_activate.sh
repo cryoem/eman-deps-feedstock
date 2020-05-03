@@ -10,6 +10,7 @@ LDFLAGS=${LDFLAGS/-Wl,-pie/}
 CXXFLAGS=${CXXFLAGS/-std=c++17/-std=c++14}
 
 export EMAN_SP_DIR=$(python -c 'import sysconfig; print(sysconfig.get_paths()["purelib"])')
+unset CONDA_BUILD_SYSROOT
 
 set +x
 
