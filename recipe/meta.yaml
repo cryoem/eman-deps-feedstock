@@ -2,10 +2,10 @@
 
 package:
     name: eman-deps-dev
-    version: '22.1'
+    version: '24.1'
 
 build:
-    number: 4
+    number: 0
     skip: True  # [win32]
 
 requirements:
@@ -32,6 +32,7 @@ outputs:
         - scipy          1.*
         - ipython
         - scikit-learn
+        - pandas
         - tensorflow-gpu 2.*                # [linux]
         - cudatoolkit                       # [linux]
         - cudnn                             # [linux]
