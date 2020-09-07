@@ -32,6 +32,7 @@ outputs:
         - scipy          1.*
         - ipython
         - scikit-learn
+        - pandas
         - tensorflow-gpu 2.*                # [linux]
         - cudatoolkit                       # [linux]
         - cudnn                             # [linux]
@@ -61,7 +62,6 @@ outputs:
         - libtiff        4.0.9
         - libpng         1.6.37
         - zlib
-        - pandas
 
 about:
   summary: Meta-package for eman2 dependencies
