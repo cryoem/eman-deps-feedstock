@@ -5,7 +5,7 @@ package:
     version: '24.1'
 
 build:
-    number: 0
+    number: 1
     skip: True  # [win32]
 
 requirements:
@@ -37,7 +37,7 @@ outputs:
         - cudatoolkit                       # [linux]
         - cudnn                             # [linux]
         - tensorflow     2.*                # [osx]
-        - bsddb3
+        - bsddb3         6.2.7   
         - pydusa         1.15 *_17           # [not win]
         - nose
         - future
@@ -61,6 +61,7 @@ outputs:
         - jpeg
         - libtiff        4.0.9
         - libpng         1.6.37
+        - libdb          6.1.26
         - zlib
 
 about:
