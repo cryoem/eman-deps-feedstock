@@ -43,7 +43,7 @@ outputs:
         - cudatoolkit                       # [linux]
         - cudnn          7                  # [linux]
         - tensorflow     2.*                # [osx]
-        - bsddb3         6.2.7
+        - bsddb3         6.2.6
         - pydusa         1.15 *_17          # [not win]
         - nose
         - future
