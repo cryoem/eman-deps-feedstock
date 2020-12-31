@@ -61,6 +61,7 @@ outputs:
         - libpng         1.6.37
         - libdb          6.1.26
         - zlib
+        - openmpi        3                     # [not win]
 
 about:
   summary: Meta-package for eman2 dependencies
