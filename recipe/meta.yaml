@@ -35,7 +35,7 @@ outputs:
         - pandas
         - tensorflow-gpu 2.*                # [linux]
         - cudatoolkit                       # [linux]
-        - cudnn                             # [linux]
+        - cudnn          7                  # [linux]
         - tensorflow     2.*                # [osx]
         - bsddb3         6.2.7
         - pydusa         1.15 *_17          # [not win]
