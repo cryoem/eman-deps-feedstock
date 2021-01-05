@@ -1,5 +1,3 @@
-{% set numpy_ver  = 1.17 %}
-
 package:
     name: eman-deps-dev
     version: '24.1'
@@ -53,7 +51,7 @@ outputs:
         - boost-cpp      1.69.* *_0            # [not win]
         - fftw           3.3.8  mpi_openmpi_*  # [not win]
         - fftw           3.3.8  nompi_*        # [win]
-        - numpy          {{ numpy_ver }}
+        - numpy          1.17
         - ftgl
         - freetype
         - gsl            2.4.*
