@@ -11,6 +11,10 @@ requirements:
         - {{ pin_subpackage('eman-deps', exact=True) }}
         - cmake          3.14.*
 
+test:
+  commands:
+    - echo "TESTING eman-deps-dev"
+
 outputs:
   - name: eman-deps
     requirements:
@@ -21,6 +25,10 @@ outputs:
 
       run_constrained:
         - cmake          3.14.*
+
+    test:
+      commands:
+        - echo "TESTING eman-deps"
 
   - name: eman-deps-cli
     requirements:
@@ -42,6 +50,10 @@ outputs:
         - configparser
         - tqdm
 
+    test:
+      commands:
+        - echo "TESTING eman-deps-cli"
+
   - name: eman-deps-cxx
     requirements:
       run:
@@ -62,6 +74,10 @@ outputs:
         - libdb          6.1.26
         - zlib
         - openmpi        3                     # [not win]
+
+    test:
+      commands:
+        - echo "TESTING eman-deps-cxx"
 
 about:
   summary: Meta-package for eman2 dependencies
