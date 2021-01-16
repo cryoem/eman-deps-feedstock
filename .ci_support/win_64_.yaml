@@ -3,11 +3,9 @@ channel_sources:
 channel_targets:
 - cryoem main
 freetype:
-- 2.9.1
+- '2'
 jpeg:
 - '9'
-numpy:
-- '1.16'
 pin_run_as_build:
   freetype:
     max_pin: x

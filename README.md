@@ -5,11 +5,9 @@ Home:
 
 Package license: 
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/cryoem/eman-deps-feedstock/blob/master/LICENSE.txt)
 
 Summary: Meta-package for eman2 dependencies
-
-
 
 Current build status
 ====================
