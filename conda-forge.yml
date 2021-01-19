@@ -3,7 +3,6 @@ appveyor:
     BINSTAR_TOKEN: IKCEuGznkMky7EruV0O+eJIN6T8lOx/ALYBXKlouPz40BKPfqOky24LFZpTlS/5Y
 
 channels:
-  sources: [cryoem, defaults, conda-forge]
   targets:
   - [cryoem, main]
 
