@@ -1,5 +1,5 @@
 package:
-    name: eman-deps-dev
+    name: eman-deps
     version: '26.0'
 
 build:
@@ -7,41 +7,11 @@ build:
     skip: True  # [win32]
 
 requirements:
-    run:
-        - {{ pin_subpackage('eman-deps', exact=True) }}
+    host:
         - cmake          3.14.*
-
-test:
-  files:
-    - test_imports.py
-    - test_imports_future.py
-    - test_imports_pydusa.py                # [not win]
-  commands:
-    - echo "TESTING eman-deps-dev"
-    - cmake --version
-    - python test_imports.py
-    - python test_imports_future.py
-    - python test_imports_pydusa.py         # [not win]
-
-outputs:
-  - name: eman-deps
-    requirements:
-      run:
-        - {{ pin_subpackage('eman-deps-cli', exact=True) }}
         - pyqt           5.*
         - pyopengl       3.1.5
 
-      run_constrained:
-        - cmake          3.14.*
-
-    test:
-      commands:
-        - echo "TESTING eman-deps"
-
-  - name: eman-deps-cli
-    requirements:
-      run:
-        - {{ pin_subpackage('eman-deps-cxx', exact=True) }}
         - matplotlib    >3.0.0
         - scipy          1.*
         - ipython
@@ -58,13 +28,6 @@ outputs:
         - configparser
         - tqdm
 
-    test:
-      commands:
-        - echo "TESTING eman-deps-cli"
-
-  - name: eman-deps-cxx
-    requirements:
-      run:
         - python         3.7.*
         - boost          1.69.*                # [win]
         - boost          1.69.* *_0            # [not win]
@@ -83,9 +46,22 @@ outputs:
         - zlib
         - openmpi        3                     # [not win]
 
-    test:
-      commands:
-        - echo "TESTING eman-deps-cxx"
+    run:
+        {% for package in resolved_packages('host') %}
+        - {{ package }}
+        {% endfor %}
+
+test:
+  files:
+    - test_imports.py
+    - test_imports_future.py
+    - test_imports_pydusa.py                # [not win]
+  commands:
+    - echo "TESTING eman-deps"
+    - cmake --version
+    - python test_imports.py
+    - python test_imports_future.py
+    - python test_imports_pydusa.py         # [not win]
 
 about:
   summary: Meta-package for eman2 dependencies
