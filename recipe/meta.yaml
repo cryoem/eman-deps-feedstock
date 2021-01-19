@@ -1,39 +1,26 @@
 package:
-    name: eman-deps-dev
-    version: '24.1'
+    name: eman-deps
+    version: '25.1'
 
 build:
-    number: 1
+    number: 0
     skip: True  # [win32]
 
 requirements:
     run:
-        - {{ pin_subpackage('eman-deps', exact=True) }}
-        - cmake          3.14.*
-
-test:
-  commands:
-    - echo "TESTING eman-deps-dev"
-
-outputs:
-  - name: eman-deps
-    requirements:
-      run:
         - {{ pin_subpackage('eman-deps-cli', exact=True) }}
+        - cmake          3.14.*
         - pyqt           5.*
         - pyopengl       3.1.5
 
-      run_constrained:
-        - cmake          3.14.*
+test:
+  commands:
+    - echo "TESTING eman-deps"
 
-    test:
-      commands:
-        - echo "TESTING eman-deps"
-
+outputs:
   - name: eman-deps-cli
     requirements:
       run:
-        - {{ pin_subpackage('eman-deps-cxx', exact=True) }}
         - matplotlib    >3.0.0
         - scipy          1.*
         - ipython
@@ -50,13 +37,6 @@ outputs:
         - configparser
         - tqdm
 
-    test:
-      commands:
-        - echo "TESTING eman-deps-cli"
-
-  - name: eman-deps-cxx
-    requirements:
-      run:
         - python         3.7.*
         - boost          1.69.*                # [win]
         - boost          1.69.* *_0            # [not win]
@@ -77,7 +57,7 @@ outputs:
 
     test:
       commands:
-        - echo "TESTING eman-deps-cxx"
+        - echo "TESTING eman-deps-cli"
 
 about:
   summary: Meta-package for eman2 dependencies
