@@ -3,7 +3,7 @@ MACOSX_DEPLOYMENT_TARGET:
 channel_sources:
 - cryoem, defaults, conda-forge
 channel_targets:
-- cryoem main
+- cryoem dev
 freetype:
 - '2'
 jpeg:
