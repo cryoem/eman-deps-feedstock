@@ -1,5 +1,5 @@
-About eman-deps-dev
-===================
+About eman-deps
+===============
 
 Home: 
 
@@ -43,23 +43,20 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-eman--deps-green.svg)](https://anaconda.org/cryoem/eman-deps) | [![Conda Downloads](https://img.shields.io/conda/dn/cryoem/eman-deps.svg)](https://anaconda.org/cryoem/eman-deps) | [![Conda Version](https://img.shields.io/conda/vn/cryoem/eman-deps.svg)](https://anaconda.org/cryoem/eman-deps) | [![Conda Platforms](https://img.shields.io/conda/pn/cryoem/eman-deps.svg)](https://anaconda.org/cryoem/eman-deps) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-eman--deps--cli-green.svg)](https://anaconda.org/cryoem/eman-deps-cli) | [![Conda Downloads](https://img.shields.io/conda/dn/cryoem/eman-deps-cli.svg)](https://anaconda.org/cryoem/eman-deps-cli) | [![Conda Version](https://img.shields.io/conda/vn/cryoem/eman-deps-cli.svg)](https://anaconda.org/cryoem/eman-deps-cli) | [![Conda Platforms](https://img.shields.io/conda/pn/cryoem/eman-deps-cli.svg)](https://anaconda.org/cryoem/eman-deps-cli) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-eman--deps--cxx-green.svg)](https://anaconda.org/cryoem/eman-deps-cxx) | [![Conda Downloads](https://img.shields.io/conda/dn/cryoem/eman-deps-cxx.svg)](https://anaconda.org/cryoem/eman-deps-cxx) | [![Conda Version](https://img.shields.io/conda/vn/cryoem/eman-deps-cxx.svg)](https://anaconda.org/cryoem/eman-deps-cxx) | [![Conda Platforms](https://img.shields.io/conda/pn/cryoem/eman-deps-cxx.svg)](https://anaconda.org/cryoem/eman-deps-cxx) |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-eman--deps--dev-green.svg)](https://anaconda.org/cryoem/eman-deps-dev) | [![Conda Downloads](https://img.shields.io/conda/dn/cryoem/eman-deps-dev.svg)](https://anaconda.org/cryoem/eman-deps-dev) | [![Conda Version](https://img.shields.io/conda/vn/cryoem/eman-deps-dev.svg)](https://anaconda.org/cryoem/eman-deps-dev) | [![Conda Platforms](https://img.shields.io/conda/pn/cryoem/eman-deps-dev.svg)](https://anaconda.org/cryoem/eman-deps-dev) |
 
-Installing eman-deps-dev
-========================
+Installing eman-deps
+====================
 
-Installing `eman-deps-dev` from the `cryoem` channel can be achieved by adding `cryoem` to your channels with:
+Installing `eman-deps` from the `cryoem` channel can be achieved by adding `cryoem` to your channels with:
 
 ```
 conda config --add channels cryoem
 ```
 
-Once the `cryoem` channel has been enabled, `eman-deps, eman-deps-cli, eman-deps-cxx, eman-deps-dev` can be installed with:
+Once the `cryoem` channel has been enabled, `eman-deps` can be installed with:
 
 ```
-conda install eman-deps eman-deps-cli eman-deps-cxx eman-deps-dev
+conda install eman-deps
 ```
 
 It is possible to list all of the versions of `eman-deps` available on your platform with:
@@ -71,17 +68,17 @@ conda search eman-deps --channel cryoem
 
 
 
-Updating eman-deps-dev-feedstock
-================================
+Updating eman-deps-feedstock
+============================
 
-If you would like to improve the eman-deps-dev recipe or build a new
+If you would like to improve the eman-deps recipe or build a new
 package version, please fork this repository and submit a PR. Upon submission,
 your changes will be run on the appropriate platforms to give the reviewer an
 opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `cryoem` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `cryoem` channel.
-Note that all branches in the cryoem/eman-deps-dev-feedstock are
+Note that all branches in the cryoem/eman-deps-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
