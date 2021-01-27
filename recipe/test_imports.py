@@ -9,9 +9,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtCore import QEvent
 from PyQt5.QtCore import QTimer
 from PyQt5.QtCore import Qt
-from UserDict import DictMixin
 from bisect import insort
-from bsddb import db
 from bsddb3 import db
 from builtins import object
 from builtins import range
@@ -86,9 +84,6 @@ from shutil import copyfile
 from sklearn import linear_model
 from sklearn.cluster import KMeans
 from sklearn.decomposition import PCA
-from string import atof
-from string import atoi
-from string import replace
 from struct import pack
 from struct import unpack
 from sys import argv
@@ -132,7 +127,6 @@ import matplotlib.cm
 import matplotlib.mlab
 import matplotlib.pyplot
 import multiprocessing
-import new
 import numpy
 import numpy.linalg
 import operator
