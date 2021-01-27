@@ -15,11 +15,13 @@ test:
   files:
     - test_imports.py
     - test_imports_future.py
+    - test_imports_pydusa.py                # [not win]
   commands:
     - echo "TESTING eman-deps-dev"
     - cmake --version
     - python test_imports.py
     - python test_imports_future.py
+    - python test_imports_pydusa.py         # [not win]
 
 outputs:
   - name: eman-deps
