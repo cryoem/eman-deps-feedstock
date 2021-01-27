@@ -3,7 +3,7 @@ package:
     version: '24.1'
 
 build:
-    number: 1
+    number: 2
     skip: True  # [win32]
 
 requirements:
@@ -50,7 +50,7 @@ outputs:
         - tensorflow-gpu 2.*                # [linux]
         - cudatoolkit                       # [linux]
         - cudnn          7                  # [linux]
-        - tensorflow     2.*                # [osx]
+        - tensorflow     2.*                # [osx or win]
         - bsddb3         6.2.6
         - pydusa         1.15 *_17          # [not win]
         - nose
