@@ -42,7 +42,7 @@ outputs:
         - tensorflow-gpu 2.*                # [linux]
         - cudatoolkit                       # [linux]
         - cudnn          7                  # [linux]
-        - tensorflow     2.*                # [osx]
+        - tensorflow     2.*                # [osx or win]
         - bsddb3         6.2.6
         - pydusa         1.15 *_17          # [not win]
         - nose
