@@ -4,7 +4,6 @@ from OpenGL import GLUT
 from PyQt5 import QtCore
 from PyQt5 import QtGui
 from PyQt5 import QtOpenGL
-from PyQt5 import QtWebEngineWidgets
 from PyQt5 import QtWidgets
 from PyQt5.QtCore import QEvent
 from PyQt5.QtCore import QTimer
