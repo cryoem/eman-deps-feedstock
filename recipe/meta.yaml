@@ -20,9 +20,9 @@ build:
 
 requirements:
     host:
-        - cmake          3.14.*             # [ui == 'gui']
         - pyqt           5.*                # [ui == 'gui']
         - pyopengl       3.1.5              # [ui == 'gui']
+        - cmake          3.14.*
 
         - matplotlib    >3.0.0
         - scipy          1.*
