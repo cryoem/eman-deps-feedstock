@@ -1,9 +1,9 @@
 package:
     name: eman-deps-dev
-    version: '24.1'
+    version: '26.0'
 
 build:
-    number: 2
+    number: 0
     skip: True  # [win32]
 
 requirements:
