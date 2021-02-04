@@ -41,7 +41,7 @@ requirements:
         - tqdm
 
         - python         3.7.*
-        - boost          1.72
+        - boost          1.73
         - fftw           3.3.8  mpi_openmpi_*  # [not win]
         - fftw           3.3.8  nompi_*        # [win]
         - numpy          1.17
