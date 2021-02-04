@@ -10,7 +10,7 @@ jobs:
     machine: true
     environment:
       - CONFIG: "linux_64_uigui"
-      - UPLOAD_PACKAGES: "True"
+      - UPLOAD_PACKAGES: "False"
         DOCKER_IMAGE: "quay.io/condaforge/linux-anvil-comp7"
     steps:
       - checkout
@@ -30,7 +30,7 @@ jobs:
     machine: true
     environment:
       - CONFIG: "linux_64_uinogui"
-      - UPLOAD_PACKAGES: "True"
+      - UPLOAD_PACKAGES: "False"
         DOCKER_IMAGE: "quay.io/condaforge/linux-anvil-comp7"
     steps:
       - checkout
