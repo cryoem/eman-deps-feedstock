@@ -1,13 +1,3 @@
-from OpenGL import GL
-from OpenGL import GLU
-from OpenGL import GLUT
-from PyQt5 import QtCore
-from PyQt5 import QtGui
-from PyQt5 import QtOpenGL
-from PyQt5 import QtWidgets
-from PyQt5.QtCore import QEvent
-from PyQt5.QtCore import QTimer
-from PyQt5.QtCore import Qt
 from bisect import insort
 from bsddb3 import db
 from builtins import object
@@ -90,10 +80,6 @@ from weakref import WeakKeyDictionary
 from xml.sax.handler import ContentHandler
 from zlib import compress
 from zlib import decompress
-import OpenGL
-import OpenGL.GL
-import OpenGL.arrays.vbo
-import PyQt5
 import _thread
 import abc
 import argparse
