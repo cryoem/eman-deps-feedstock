@@ -36,7 +36,7 @@ requirements:
         - cudnn          7                  # [linux]
         - tensorflow     2                  # [osx or win]
         - bsddb3
-        - pydusa         2.1                # [not win]
+        - pydusa                            # [not win]
         - nose
         - future
         - configparser
