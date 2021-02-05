@@ -56,7 +56,7 @@ requirements:
         - libpng
         - libdb
         - zlib
-        - openmpi        3                     # [not win]
+        - openmpi        4                     # [not win]
 
     run:
         {% for package in resolved_packages('host') %}
