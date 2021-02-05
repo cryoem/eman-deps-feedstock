@@ -12,6 +12,7 @@ build:
     number: {{ build }}
     skip: True  # [win32]
     skip: True  # [ui == 'nogui']
+    skip: True  # [py<37]
 
     # add build string so packages can depend on
     # gui or nogui variants explicitly:
@@ -21,39 +22,39 @@ build:
 
 requirements:
     host:
-        - pyqt           5.*                # [ui == 'gui']
-        - pyopengl       3.1.5              # [ui == 'gui']
-        - cmake          3.14.*
+        - pyqt                              # [ui == 'gui']
+        - pyopengl                          # [ui == 'gui']
+        - cmake
 
-        - matplotlib    >3.0.0
-        - scipy          1.*
+        - matplotlib
+        - scipy
         - ipython
         - scikit-learn
         - pandas
-        - tensorflow-gpu 2.*                # [linux]
+        - tensorflow-gpu 2                  # [linux]
         - cudatoolkit                       # [linux]
         - cudnn          7                  # [linux]
-        - tensorflow     2.*                # [osx or win]
-        - bsddb3         6.2.6
-        - pydusa         1.15 *_17          # [not win]
+        - tensorflow     2                  # [osx or win]
+        - bsddb3
+        - pydusa         2.1                # [not win]
         - nose
         - future
         - configparser
         - tqdm
 
-        - python         3.7.*
-        - boost          1.74
-        - fftw           3.3.8  mpi_openmpi_*  # [not win]
-        - fftw           3.3.8  nompi_*        # [win]
-        - numpy          1.17
+        - python
+        - boost
+        - fftw           3.*  mpi_openmpi_*  # [not win]
+        - fftw           3.*  nompi_*        # [win]
+        - numpy
         - ftgl
         - freetype
-        - gsl            2.4.*
-        - hdf5           1.8.18
+        - gsl
+        - hdf5
         - jpeg
-        - libtiff        4.0.9
-        - libpng         1.6.37
-        - libdb          6.1.26
+        - libtiff
+        - libpng
+        - libdb
         - zlib
         - openmpi        3                     # [not win]
 
