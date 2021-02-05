@@ -35,7 +35,7 @@ requirements:
         - cudnn          7                  # [linux]
         - tensorflow     2.*                # [osx or win]
         - bsddb3         6.2.6
-        - pydusa         2.1                # [not win]
+        - pydusa         3.0                # [not win]
         - nose
         - future
         - configparser
@@ -55,7 +55,6 @@ requirements:
         - libpng         1.6.37
         - libdb          6.1.26
         - zlib
-        - openmpi        3                     # [not win]
 
     run:
         {% for package in resolved_packages('host') %}
