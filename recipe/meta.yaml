@@ -21,6 +21,8 @@ build:
     # `pkg * nogui_*` for no gui
     string: "{{ ui }}_h{{ PKG_HASH }}_{{ build }}"
 
+    script: copy_activation_script.sh
+
 requirements:
     build:
       - {{ compiler('c') }}
