@@ -1,7 +1,11 @@
+cdt_name:
+- cos6
 channel_sources:
 - cryoem, defaults, conda-forge
 channel_targets:
 - cryoem main
+docker_image:
+- quay.io/condaforge/linux-anvil-comp7
 freetype:
 - '2'
 jpeg:
@@ -11,11 +15,19 @@ pin_run_as_build:
     max_pin: x
   jpeg:
     max_pin: x
+  python:
+    min_pin: x.x
+    max_pin: x.x
   zlib:
     max_pin: x.x
+python:
+- 3.8.* *_cpython
 target_platform:
-- win-64
+- linux-64
 ui:
 - gui
+zip_keys:
+- - cdt_name
+  - docker_image
 zlib:
 - '1.2'
