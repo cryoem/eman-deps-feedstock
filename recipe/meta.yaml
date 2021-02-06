@@ -11,6 +11,7 @@ build:
     {% endif %}
     number: {{ build }}
     skip: True  # [win32]
+    skip: True  # [py<37]
     skip: True  # [ui=='nogui']
 
     # add build string so packages can depend on
@@ -41,7 +42,7 @@ requirements:
         - configparser
         - tqdm
 
-        - python         3.7.*
+        - python
         - boost          1.73
         - fftw           3.3.8  mpi_openmpi_*  # [not win]
         - fftw           3.3.8  nompi_*        # [win]
