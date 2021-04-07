@@ -1,47 +1,29 @@
+{% set build = 0 %}
+
 package:
-    name: eman-deps-dev
-    version: '24.1'
+    name: eman-deps
+    version: '25.0'
 
 build:
-    number: 2
+    # prioritize gui variant via build number
+    {% if ui == 'gui' %}
+    {% set build = build + 100 %}
+    {% endif %}
+    number: {{ build }}
     skip: True  # [win32]
 
+    # add build string so packages can depend on
+    # gui or nogui variants explicitly:
+    # `pkg * gui_*` for any gui
+    # `pkg * nogui_*` for no gui
+    string: "{{ ui }}_h{{ PKG_HASH }}_{{ build }}"
+
 requirements:
-    run:
-        - {{ pin_subpackage('eman-deps', exact=True) }}
+    host:
+        - pyqt           5.*                # [ui == 'gui']
+        - pyopengl       3.1.5              # [ui == 'gui']
         - cmake          3.14.*
 
-test:
-  files:
-    - test_imports.py
-    - test_imports_future.py
-    - test_imports_pydusa.py                # [not win]
-  commands:
-    - echo "TESTING eman-deps-dev"
-    - cmake --version
-    - python test_imports.py
-    - python test_imports_future.py
-    - python test_imports_pydusa.py         # [not win]
-
-outputs:
-  - name: eman-deps
-    requirements:
-      run:
-        - {{ pin_subpackage('eman-deps-cli', exact=True) }}
-        - pyqt           5.*
-        - pyopengl       3.1.5
-
-      run_constrained:
-        - cmake          3.14.*
-
-    test:
-      commands:
-        - echo "TESTING eman-deps"
-
-  - name: eman-deps-cli
-    requirements:
-      run:
-        - {{ pin_subpackage('eman-deps-cxx', exact=True) }}
         - matplotlib    >3.0.0
         - scipy          1.*
         - ipython
@@ -58,13 +40,6 @@ outputs:
         - configparser
         - tqdm
 
-    test:
-      commands:
-        - echo "TESTING eman-deps-cli"
-
-  - name: eman-deps-cxx
-    requirements:
-      run:
         - python         3.7.*
         - boost          1.69.*                # [win]
         - boost          1.69.* *_0            # [not win]
@@ -83,9 +58,24 @@ outputs:
         - zlib
         - openmpi        3                     # [not win]
 
-    test:
-      commands:
-        - echo "TESTING eman-deps-cxx"
+    run:
+        {% for package in resolved_packages('host') %}
+        - {{ package }}
+        {% endfor %}
+
+test:
+  files:
+    - test_imports.py
+    - test_imports_future.py
+    - test_imports_gui.py                   # [ui == 'gui']
+    - test_imports_pydusa.py                # [not win]
+  commands:
+    - echo "TESTING eman-deps"
+    - cmake --version
+    - python test_imports.py
+    - python test_imports_future.py
+    - python test_imports_gui.py            # [ui == 'gui']
+    - python test_imports_pydusa.py         # [not win]
 
 about:
   summary: Meta-package for eman2 dependencies
