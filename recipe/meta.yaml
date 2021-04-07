@@ -2,7 +2,7 @@
 
 package:
     name: eman-deps
-    version: '25.0'
+    version: '26.0'
 
 build:
     # prioritize gui variant via build number
@@ -39,6 +39,7 @@ requirements:
         - future
         - configparser
         - tqdm
+        - jupyterlab
 
         - python         3.7.*
         - boost          1.69.*                # [win]
