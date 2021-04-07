@@ -2,7 +2,7 @@
 
 package:
     name: eman-deps
-    version: '25.0'
+    version: '26.0'
 
 build:
     # prioritize gui variant via build number
