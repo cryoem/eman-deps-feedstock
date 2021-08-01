@@ -21,13 +21,6 @@ Current build status
       </a>
     </td>
   </tr><tr>
-    <td>Travis</td>
-    <td>
-      <a href="https://travis-ci.com/cryoem/eman-deps-feedstock">
-        <img alt="macOS" src="https://img.shields.io/travis/com/cryoem/eman-deps-feedstock/master.svg?label=macOS">
-      </a>
-    </td>
-  </tr><tr>
     <td>Appveyor</td>
     <td>
       <a href="https://ci.appveyor.com/project/cryoem/eman-deps-feedstock/branch/master">
@@ -51,6 +44,7 @@ Installing `eman-deps` from the `cryoem` channel can be achieved by adding `cryo
 
 ```
 conda config --add channels cryoem
+conda config --set channel_priority strict
 ```
 
 Once the `cryoem` channel has been enabled, `eman-deps` can be installed with:
