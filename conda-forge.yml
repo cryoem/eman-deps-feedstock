@@ -12,7 +12,7 @@ github:
 
 provider:
   linux: circle
-  osx: travis
+  osx: github_actions
   win: appveyor
 
 azure:
