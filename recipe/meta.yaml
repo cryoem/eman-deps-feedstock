@@ -57,7 +57,7 @@ requirements:
         - ftgl
         - freetype
         - gsl            2.4.*
-        - hdf5           1.8.18
+        - hdf5
         - jpeg
         - libtiff        4.0.9
         - libpng         1.6.37
