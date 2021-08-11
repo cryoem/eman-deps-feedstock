@@ -28,7 +28,7 @@ requirements:
     host:
         - pyqt           5.*                # [ui == 'gui']
         - pyopengl       3.1.5              # [ui == 'gui']
-        - cmake          3.14.*
+        - cmake        >=3.14
 
         - matplotlib
         - scipy
