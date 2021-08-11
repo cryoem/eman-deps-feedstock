@@ -39,7 +39,7 @@ requirements:
         - cudatoolkit                       # [linux]
         - cudnn          7                  # [linux]
         - tensorflow     2.*                # [osx or win]
-        - bsddb3         6.2.6
+        - bsddb3
         - pydusa         1.15 *_17          # [not win]
         - nose
         - future
@@ -61,7 +61,6 @@ requirements:
         - jpeg
         - libtiff        4.0.9
         - libpng         1.6.37
-        - libdb          6.1.26
         - zlib
         - openmpi        3                     # [not win]
 
