@@ -30,8 +30,8 @@ requirements:
         - pyopengl       3.1.5              # [ui == 'gui']
         - cmake          3.14.*
 
-        - matplotlib    >3.0.0
-        - scipy          1.*
+        - matplotlib
+        - scipy
         - ipython
         - scikit-learn
         - pandas
