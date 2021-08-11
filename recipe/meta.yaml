@@ -56,11 +56,11 @@ requirements:
         - numpy          1.17
         - ftgl
         - freetype
-        - gsl            2.4.*
+        - gsl
         - hdf5
         - jpeg
-        - libtiff        4.0.9
-        - libpng         1.6.37
+        - libtiff
+        - libpng
         - zlib
         - openmpi        3                     # [not win]
 
