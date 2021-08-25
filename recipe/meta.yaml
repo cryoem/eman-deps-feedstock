@@ -44,6 +44,7 @@ requirements:
       - configparser
       - tqdm
       - jupyterlab
+      - nodejs         16
 
       - python
       - boost
@@ -78,6 +79,7 @@ requirements:
       - configparser
       - tqdm
       - jupyterlab
+      - nodejs         16
 
       - python
       - boost
