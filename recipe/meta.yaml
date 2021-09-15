@@ -11,6 +11,7 @@ build:
     {% endif %}
     number: {{ build }}
     skip: True  # [win32]
+    skip: True  # [py!=37]
     skip: True  # [ui=='nogui']
 
     # add build string so packages can depend on
@@ -23,6 +24,7 @@ requirements:
     build:
       - {{ compiler('c') }}
       - sysroot_linux-64 2.17               # [linux64]
+
     host:
         - pyqt           5.*                # [ui == 'gui']
         - pyopengl       3.1.5              # [ui == 'gui']
@@ -45,7 +47,7 @@ requirements:
         - tqdm
         - jupyterlab
 
-        - python         3.7.*
+        - python
         - boost          1.69.*                # [win]
         - boost          1.69.* *_0            # [not win]
         - boost-cpp      1.69.* *_0            # [not win]
