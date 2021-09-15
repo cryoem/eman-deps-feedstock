@@ -20,13 +20,6 @@ Current build status
         <img alt="Linux" src="https://img.shields.io/circleci/project/github/cryoem/eman-deps-feedstock/master.svg?label=Linux">
       </a>
     </td>
-  </tr><tr>
-    <td>Appveyor</td>
-    <td>
-      <a href="https://ci.appveyor.com/project/cryoem/eman-deps-feedstock/branch/master">
-        <img alt="windows" src="https://img.shields.io/appveyor/ci/cryoem/eman-deps-feedstock/master.svg?label=Windows">
-      </a>
-    </td>
   </tr>
 </table>
 
