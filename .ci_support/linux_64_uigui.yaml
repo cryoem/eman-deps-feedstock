@@ -1,11 +1,15 @@
+c_compiler:
+- gcc
+c_compiler_version:
+- '9'
 cdt_name:
-- cos6
+- cos7
 channel_sources:
 - cryoem, defaults, conda-forge
 channel_targets:
 - cryoem main
 docker_image:
-- quay.io/condaforge/linux-anvil-comp7
+- quay.io/condaforge/linux-anvil-cos7-cuda:10.2
 freetype:
 - '2'
 jpeg:

@@ -19,6 +19,9 @@ build:
     string: "{{ ui }}_h{{ PKG_HASH }}_{{ build }}"
 
 requirements:
+    build:                                  # [linux64]
+      - {{ compiler('c') }}                 # [linux64]
+      - sysroot_linux-64 2.17               # [linux64]
     host:
         - pyqt           5.*                # [ui == 'gui']
         - pyopengl       3.1.5              # [ui == 'gui']
