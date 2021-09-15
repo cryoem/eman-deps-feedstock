@@ -53,7 +53,7 @@ requirements:
         - boost-cpp      1.69.* *_0            # [not win]
         - fftw           *      mpi_openmpi_*  # [not win]
         - fftw           *      nompi_*        # [win]
-        - numpy          1.17
+        - numpy
         - ftgl
         - freetype
         - gsl
