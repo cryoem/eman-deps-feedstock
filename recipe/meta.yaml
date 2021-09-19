@@ -38,7 +38,7 @@ requirements:
       - tensorflow-gpu 2.*                # [linux]
       - tensorflow     2.*                # [osx or win]
       - bsddb3
-      - pydusa         2.1                # [not win]
+      - pydusa         3.0                # [not win]
       - nose
       - future
       - configparser
@@ -60,7 +60,6 @@ requirements:
       - libtiff
       - libpng
       - zlib
-      - openmpi        3                     # [not win]
 
     run:
       - pyqt           5.*                # [ui == 'gui']
@@ -75,7 +74,7 @@ requirements:
       - tensorflow-gpu 2.*                # [linux]
       - tensorflow     2.*                # [osx or win]
       - bsddb3
-      - pydusa         2.1                # [not win]
+      - pydusa         3.0                # [not win]
       - nose
       - future
       - configparser
@@ -97,7 +96,6 @@ requirements:
       - libtiff
       - libpng
       - zlib
-      - openmpi        3                     # [not win]
 
 test:
   files:
