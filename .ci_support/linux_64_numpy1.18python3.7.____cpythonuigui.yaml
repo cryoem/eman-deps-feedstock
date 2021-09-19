@@ -1,3 +1,5 @@
+boost:
+- 1.74.0
 c_compiler:
 - gcc
 c_compiler_version:
@@ -25,6 +27,8 @@ libtiff:
 numpy:
 - '1.18'
 pin_run_as_build:
+  boost:
+    max_pin: x.x.x
   freetype:
     max_pin: x
   jpeg:
