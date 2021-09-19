@@ -15,6 +15,7 @@ build:
     number: {{ build }}
     skip: True  # [win32]
     skip: True  # [py!=37]
+    skip: True  # [ui=='nogui']
 
     # add build string so packages can depend on
     # gui or nogui variants explicitly:
