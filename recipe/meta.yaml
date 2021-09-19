@@ -46,7 +46,7 @@ requirements:
       - jupyterlab
 
       - python
-      - boost          1.74.*
+      - boost
       - fftw           *      mpi_openmpi_*  # [not win]
       - fftw           *      nompi_*        # [win]
       - numpy
@@ -80,7 +80,7 @@ requirements:
       - jupyterlab
 
       - python
-      - boost          1.74.*
+      - boost
       - fftw           *      mpi_openmpi_*  # [not win]
       - fftw           *      nompi_*        # [win]
       - numpy
