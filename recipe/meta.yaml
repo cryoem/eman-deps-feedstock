@@ -36,8 +36,6 @@ requirements:
         - scikit-learn
         - pandas
         - tensorflow-gpu 2.*                # [linux]
-        - cudatoolkit                       # [linux]
-        - cudnn          7                  # [linux]
         - tensorflow     2.*                # [osx or win]
         - bsddb3
         - pydusa         2.1                # [not win]
