@@ -1,23 +1,31 @@
-MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
 c_compiler:
-- clang
-c_compiler_version:
-- '11'
+- vs2017
 channel_sources:
 - cryoem, defaults, conda-forge
 channel_targets:
 - cryoem main
 freetype:
 - '2'
+gsl:
+- '2.6'
+hdf5:
+- 1.10.6
 jpeg:
 - '9'
-macos_machine:
-- x86_64-apple-darwin13.4.0
+libpng:
+- '1.6'
+libtiff:
+- '4'
+numpy:
+- '1.18'
 pin_run_as_build:
   freetype:
     max_pin: x
   jpeg:
+    max_pin: x
+  libpng:
+    max_pin: x.x
+  libtiff:
     max_pin: x
   python:
     min_pin: x.x
@@ -27,8 +35,11 @@ pin_run_as_build:
 python:
 - 3.7.* *_cpython
 target_platform:
-- osx-64
+- win-64
 ui:
 - gui
+zip_keys:
+- - python
+  - numpy
 zlib:
 - '1.2'
