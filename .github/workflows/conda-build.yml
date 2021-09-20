@@ -16,7 +16,13 @@ jobs:
           - CONFIG: win_64_numpy1.18python3.7.____cpythonuigui
             UPLOAD_PACKAGES: True
             os: windows
+          - CONFIG: win_64_numpy1.18python3.7.____cpythonuinogui
+            UPLOAD_PACKAGES: True
+            os: windows
           - CONFIG: osx_64_numpy1.18python3.7.____cpythonuigui
+            UPLOAD_PACKAGES: True
+            os: macos
+          - CONFIG: osx_64_numpy1.18python3.7.____cpythonuinogui
             UPLOAD_PACKAGES: True
             os: macos
     steps:

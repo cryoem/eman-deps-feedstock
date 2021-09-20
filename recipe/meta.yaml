@@ -2,7 +2,7 @@
 
 package:
     name: eman-deps
-    version: '28.12'
+    version: '29.0'
 
 build:
     # prioritize gui variant via build number
@@ -12,7 +12,6 @@ build:
     number: {{ build }}
     skip: True  # [win32]
     skip: True  # [py!=37]
-    skip: True  # [ui=='nogui']
 
     # add build string so packages can depend on
     # gui or nogui variants explicitly:
