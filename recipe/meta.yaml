@@ -2,7 +2,7 @@
 
 package:
     name: eman-deps
-    version: '28.1'
+    version: '28.2'
 
 build:
     # prioritize gui variant via build number
@@ -63,9 +63,41 @@ requirements:
       - openmpi        3                     # [not win]
 
     run:
-        {% for package in resolved_packages('host') %}
-        - {{ package }}
-        {% endfor %}
+      - pyqt           5.*                # [ui == 'gui']
+      - pyopengl       3.1.5              # [ui == 'gui']
+      - cmake        >=3.14
+
+      - matplotlib
+      - scipy
+      - ipython
+      - scikit-learn
+      - pandas
+      - tensorflow-gpu 2.*                # [linux]
+      - tensorflow     2.*                # [osx or win]
+      - bsddb3
+      - pydusa         2.1                # [not win]
+      - nose
+      - future
+      - configparser
+      - tqdm
+      - jupyterlab
+
+      - python
+      - boost          1.69.*                # [win]
+      - boost          1.69.* *_0            # [not win]
+      - boost-cpp      1.69.* *_0            # [not win]
+      - fftw           *      mpi_openmpi_*  # [not win]
+      - fftw           *      nompi_*        # [win]
+      - numpy
+      - ftgl
+      - freetype
+      - gsl
+      - hdf5
+      - jpeg
+      - libtiff
+      - libpng
+      - zlib
+      - openmpi        3                     # [not win]
 
 test:
   files:
