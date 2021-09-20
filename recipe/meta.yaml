@@ -2,7 +2,7 @@
 
 package:
     name: eman-deps
-    version: '28.0'
+    version: '28.1'
 
 build:
     # prioritize gui variant via build number
@@ -26,44 +26,41 @@ requirements:
       - sysroot_linux-64 2.17               # [linux64]
 
     host:
-        - pyqt           5.*                # [ui == 'gui']
-        - pyopengl       3.1.5              # [ui == 'gui']
-        - cmake          3.14.*
+      - pyqt           5.*                # [ui == 'gui']
+      - pyopengl       3.1.5              # [ui == 'gui']
+      - cmake        >=3.14
 
-        - matplotlib    >3.0.0
-        - scipy          1.*
-        - ipython
-        - scikit-learn
-        - pandas
-        - tensorflow-gpu 2.*                # [linux]
-        - cudatoolkit                       # [linux]
-        - cudnn          7                  # [linux]
-        - tensorflow     2.*                # [osx or win]
-        - bsddb3         6.2.6
-        - pydusa         1.15 *_17          # [not win]
-        - nose
-        - future
-        - configparser
-        - tqdm
-        - jupyterlab
+      - matplotlib
+      - scipy
+      - ipython
+      - scikit-learn
+      - pandas
+      - tensorflow-gpu 2.*                # [linux]
+      - tensorflow     2.*                # [osx or win]
+      - bsddb3
+      - pydusa         2.1                # [not win]
+      - nose
+      - future
+      - configparser
+      - tqdm
+      - jupyterlab
 
-        - python
-        - boost          1.69.*                # [win]
-        - boost          1.69.* *_0            # [not win]
-        - boost-cpp      1.69.* *_0            # [not win]
-        - fftw           3.3.8  mpi_openmpi_*  # [not win]
-        - fftw           3.3.8  nompi_*        # [win]
-        - numpy          1.17
-        - ftgl
-        - freetype
-        - gsl            2.4.*
-        - hdf5           1.8.18
-        - jpeg
-        - libtiff        4.0.9
-        - libpng         1.6.37
-        - libdb          6.1.26
-        - zlib
-        - openmpi        3                     # [not win]
+      - python
+      - boost          1.69.*                # [win]
+      - boost          1.69.* *_0            # [not win]
+      - boost-cpp      1.69.* *_0            # [not win]
+      - fftw           *      mpi_openmpi_*  # [not win]
+      - fftw           *      nompi_*        # [win]
+      - numpy
+      - ftgl
+      - freetype
+      - gsl
+      - hdf5
+      - jpeg
+      - libtiff
+      - libpng
+      - zlib
+      - openmpi        3                     # [not win]
 
     run:
         {% for package in resolved_packages('host') %}
