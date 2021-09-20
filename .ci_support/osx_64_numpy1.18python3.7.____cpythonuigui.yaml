@@ -1,11 +1,13 @@
 MACOSX_DEPLOYMENT_TARGET:
 - '10.9'
+boost:
+- 1.74.0
 c_compiler:
 - clang
 c_compiler_version:
 - '11'
 channel_sources:
-- cryoem, defaults, conda-forge
+- cryoem, conda-forge, defaults
 channel_targets:
 - cryoem main
 freetype:
@@ -25,6 +27,8 @@ macos_machine:
 numpy:
 - '1.18'
 pin_run_as_build:
+  boost:
+    max_pin: x.x.x
   freetype:
     max_pin: x
   jpeg:

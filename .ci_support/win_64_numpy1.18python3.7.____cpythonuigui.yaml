@@ -1,7 +1,9 @@
+boost:
+- 1.74.0
 c_compiler:
 - vs2017
 channel_sources:
-- cryoem, defaults, conda-forge
+- cryoem, conda-forge, defaults
 channel_targets:
 - cryoem main
 freetype:
@@ -19,6 +21,8 @@ libtiff:
 numpy:
 - '1.18'
 pin_run_as_build:
+  boost:
+    max_pin: x.x.x
   freetype:
     max_pin: x
   jpeg:

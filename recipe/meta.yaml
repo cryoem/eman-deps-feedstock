@@ -2,7 +2,7 @@
 
 package:
     name: eman-deps
-    version: '28.2'
+    version: '28.12'
 
 build:
     # prioritize gui variant via build number
@@ -38,17 +38,16 @@ requirements:
       - tensorflow-gpu 2.*                # [linux]
       - tensorflow     2.*                # [osx or win]
       - bsddb3
-      - pydusa         2.1                # [not win]
+      - pydusa         3.0                # [not win]
       - nose
       - future
       - configparser
       - tqdm
       - jupyterlab
+      - nodejs         16
 
       - python
-      - boost          1.69.*                # [win]
-      - boost          1.69.* *_0            # [not win]
-      - boost-cpp      1.69.* *_0            # [not win]
+      - boost
       - fftw           *      mpi_openmpi_*  # [not win]
       - fftw           *      nompi_*        # [win]
       - numpy
@@ -60,7 +59,6 @@ requirements:
       - libtiff
       - libpng
       - zlib
-      - openmpi        3                     # [not win]
 
     run:
       - pyqt           5.*                # [ui == 'gui']
@@ -75,17 +73,16 @@ requirements:
       - tensorflow-gpu 2.*                # [linux]
       - tensorflow     2.*                # [osx or win]
       - bsddb3
-      - pydusa         2.1                # [not win]
+      - pydusa         3.0                # [not win]
       - nose
       - future
       - configparser
       - tqdm
       - jupyterlab
+      - nodejs         16
 
       - python
-      - boost          1.69.*                # [win]
-      - boost          1.69.* *_0            # [not win]
-      - boost-cpp      1.69.* *_0            # [not win]
+      - boost
       - fftw           *      mpi_openmpi_*  # [not win]
       - fftw           *      nompi_*        # [win]
       - numpy
@@ -97,7 +94,6 @@ requirements:
       - libtiff
       - libpng
       - zlib
-      - openmpi        3                     # [not win]
 
 test:
   files:
