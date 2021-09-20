@@ -2,7 +2,7 @@
 
 package:
     name: eman-deps
-    version: '26.0'
+    version: '28.0'
 
 build:
     # prioritize gui variant via build number
@@ -11,6 +11,8 @@ build:
     {% endif %}
     number: {{ build }}
     skip: True  # [win32]
+    skip: True  # [py!=37]
+    skip: True  # [ui=='nogui']
 
     # add build string so packages can depend on
     # gui or nogui variants explicitly:
@@ -22,6 +24,7 @@ requirements:
     build:
       - {{ compiler('c') }}
       - sysroot_linux-64 2.17               # [linux64]
+
     host:
         - pyqt           5.*                # [ui == 'gui']
         - pyopengl       3.1.5              # [ui == 'gui']
@@ -44,7 +47,7 @@ requirements:
         - tqdm
         - jupyterlab
 
-        - python         3.7.*
+        - python
         - boost          1.69.*                # [win]
         - boost          1.69.* *_0            # [not win]
         - boost-cpp      1.69.* *_0            # [not win]
