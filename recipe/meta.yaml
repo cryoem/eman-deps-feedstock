@@ -5,10 +5,6 @@ package:
     version: '29.0'
 
 build:
-    # prioritize gui variant via build number
-    {% if ui == 'gui' %}
-    {% set build = build + 100 %}
-    {% endif %}
     number: {{ build }}
     skip: True  # [win32]
     skip: True  # [py!=37]
