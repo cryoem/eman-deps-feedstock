@@ -18,8 +18,6 @@ libpng:
 - '1.6'
 libtiff:
 - '4'
-numpy:
-- '1.18'
 pin_run_as_build:
   boost:
     max_pin: x.x.x
@@ -41,9 +39,6 @@ python:
 target_platform:
 - win-64
 ui:
-- gui
-zip_keys:
-- - python
-  - numpy
+- nogui
 zlib:
 - '1.2'

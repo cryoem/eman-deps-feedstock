@@ -13,16 +13,16 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - CONFIG: win_64_numpy1.18python3.7.____cpythonuigui
+          - CONFIG: win_64_python3.7.____cpythonuigui
             UPLOAD_PACKAGES: True
             os: windows
-          - CONFIG: win_64_numpy1.18python3.7.____cpythonuinogui
+          - CONFIG: win_64_python3.7.____cpythonuinogui
             UPLOAD_PACKAGES: True
             os: windows
-          - CONFIG: osx_64_numpy1.18python3.7.____cpythonuigui
+          - CONFIG: osx_64_python3.7.____cpythonuigui
             UPLOAD_PACKAGES: True
             os: macos
-          - CONFIG: osx_64_numpy1.18python3.7.____cpythonuinogui
+          - CONFIG: osx_64_python3.7.____cpythonuinogui
             UPLOAD_PACKAGES: True
             os: macos
     steps:

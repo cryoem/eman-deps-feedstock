@@ -1,11 +1,17 @@
 boost:
 - 1.74.0
 c_compiler:
-- vs2017
+- gcc
+c_compiler_version:
+- '9'
+cdt_name:
+- cos7
 channel_sources:
 - cryoem, conda-forge, defaults
 channel_targets:
 - cryoem main
+docker_image:
+- quay.io/condaforge/linux-anvil-cos7-cuda:10.2
 freetype:
 - '2'
 gsl:
@@ -18,8 +24,6 @@ libpng:
 - '1.6'
 libtiff:
 - '4'
-numpy:
-- '1.18'
 pin_run_as_build:
   boost:
     max_pin: x.x.x
@@ -39,11 +43,11 @@ pin_run_as_build:
 python:
 - 3.7.* *_cpython
 target_platform:
-- win-64
+- linux-64
 ui:
-- nogui
+- gui
 zip_keys:
-- - python
-  - numpy
+- - cdt_name
+  - docker_image
 zlib:
 - '1.2'
