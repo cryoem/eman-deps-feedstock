@@ -24,8 +24,6 @@ libpng:
 - '1.6'
 libtiff:
 - '4'
-numpy:
-- '1.18'
 pin_run_as_build:
   boost:
     max_pin: x.x.x
@@ -51,7 +49,5 @@ ui:
 zip_keys:
 - - cdt_name
   - docker_image
-- - python
-  - numpy
 zlib:
 - '1.2'
