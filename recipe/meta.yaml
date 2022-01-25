@@ -31,6 +31,7 @@ requirements:
       - pyopengl                         # [ui == 'gui']
       - cmake        >=3.14
 
+      - ipywidgets
       - matplotlib
       - scipy
       - ipython
@@ -63,6 +64,7 @@ requirements:
       - pyopengl                          # [ui == 'gui']
       - cmake        >=3.14
 
+      - ipywidgets
       - matplotlib
       - scipy
       - ipython
