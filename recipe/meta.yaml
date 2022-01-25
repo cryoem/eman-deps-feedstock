@@ -50,7 +50,7 @@ requirements:
       - boost
       - fftw           *      mpi_openmpi_*  # [not win]
       - fftw           *      nompi_*        # [win]
-      - numpy          1.18
+      - numpy
       - ftgl
       - freetype
       - gsl
