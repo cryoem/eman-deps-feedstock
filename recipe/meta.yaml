@@ -102,7 +102,7 @@ test:
     - test_imports_pydusa.py                # [not win]
   commands:
     - echo "TESTING eman-deps"
-    - python -c "import numpy; assert numpy.version.version.startswith('1.18'), 'NumPy version expected to be 1.18'"
+    - python -c "import numpy; assert numpy.version.version.startswith('{{ numpy }}'), 'NumPy version expected to be {{ numpy }}'"
     - cmake --version
     - python test_imports.py
     - python test_imports_future.py
