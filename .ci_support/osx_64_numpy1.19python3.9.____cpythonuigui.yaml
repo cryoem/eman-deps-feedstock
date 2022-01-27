@@ -24,6 +24,8 @@ libtiff:
 - '4'
 macos_machine:
 - x86_64-apple-darwin13.4.0
+nodejs:
+- '*'
 numpy:
 - '1.19'
 pin_run_as_build:
@@ -45,6 +47,12 @@ pin_run_as_build:
     max_pin: x.x
   zlib:
     max_pin: x.x
+pydusa:
+- '3.0'
+pyopengl:
+- 3.1.5
+pyqt:
+- '5'
 python:
 - 3.9.* *_cpython
 target_platform:
