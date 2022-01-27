@@ -28,8 +28,8 @@ requirements:
       - sysroot_linux-64 2.17               # [linux64]
 
     host:
-      - pyqt                             # [ui == 'gui']
-      - pyopengl                         # [ui == 'gui']
+      - pyqt           {{ pyqt }}        # [ui == 'gui']
+      - pyopengl       {{ pyopengl }}    # [ui == 'gui']
       - cmake        >=3.14
 
       - matplotlib
@@ -38,13 +38,13 @@ requirements:
       - scikit-learn
       - pandas
       - bsddb3
-      - pydusa         3.0                # [not win]
+      - pydusa         {{ pydusa }}       # [not win]
       - nose
       - future
       - configparser
       - tqdm
       - jupyterlab
-      - nodejs         *
+      - nodejs         {{ nodejs }}
 
       - python
       - boost
@@ -61,8 +61,8 @@ requirements:
       - zlib
 
     run:
-      - pyqt                              # [ui == 'gui']
-      - pyopengl                          # [ui == 'gui']
+      - pyqt           {{ pyqt }}         # [ui == 'gui']
+      - pyopengl       {{ pyopengl }}     # [ui == 'gui']
       - cmake        >=3.14
 
       - matplotlib
@@ -71,13 +71,13 @@ requirements:
       - scikit-learn
       - pandas
       - bsddb3
-      - pydusa         3.0                # [not win]
+      - pydusa         {{ pydusa }}       # [not win]
       - nose
       - future
       - configparser
       - tqdm
       - jupyterlab
-      - nodejs         *
+      - nodejs         {{ nodejs }}
 
       - python
       - boost
