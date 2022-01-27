@@ -11,11 +11,11 @@ channel_sources:
 channel_targets:
 - cryoem main
 docker_image:
-- quay.io/condaforge/linux-anvil-cos7-cuda:10.2
+- quay.io/condaforge/linux-anvil-cos7-x86_64
 freetype:
 - '2'
 gsl:
-- '2.6'
+- '2.7'
 hdf5:
 - 1.10.6
 jpeg:
@@ -46,8 +46,5 @@ target_platform:
 - linux-64
 ui:
 - nogui
-zip_keys:
-- - cdt_name
-  - docker_image
 zlib:
 - '1.2'
