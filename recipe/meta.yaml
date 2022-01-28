@@ -37,6 +37,8 @@ requirements:
       - ipython
       - scikit-learn
       - pandas
+      - tensorflow-gpu 2.*                # [linux]
+      - tensorflow     2.*                # [osx or win]
       - bsddb3
       - pydusa                            # [not win]
       - nose
@@ -70,6 +72,8 @@ requirements:
       - ipython
       - scikit-learn
       - pandas
+      - tensorflow-gpu 2.*                # [linux]
+      - tensorflow     2.*                # [osx or win]
       - bsddb3
       - pydusa                            # [not win]
       - nose
