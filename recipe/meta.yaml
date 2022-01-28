@@ -81,8 +81,6 @@ requirements:
 
       - python
       - boost
-      - fftw           *      mpi_openmpi_*  # [not win]
-      - fftw           *      nompi_*        # [win]
       - {{ pin_compatible('numpy', min_pin='x.x', max_pin='x.x') }}
       - ftgl
       - freetype
