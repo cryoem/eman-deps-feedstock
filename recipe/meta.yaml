@@ -13,7 +13,6 @@ package:
 
 build:
     number: {{ build }}
-    skip: True  # [win32]
     skip: True  # [ui=='nogui']
 
     # add build string so packages can depend on
