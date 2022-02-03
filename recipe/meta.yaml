@@ -1,4 +1,4 @@
-{% set build = 9 %}
+{% set build = 10 %}
 
 # prioritize gui variant via minor version
 {% if ui == 'gui' %}
