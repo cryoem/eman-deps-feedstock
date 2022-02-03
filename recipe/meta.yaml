@@ -11,6 +11,10 @@ package:
     name: eman-deps
     version: "30.{{ ver_minor }}"
 
+{% if win %}
+{% set numpy = '1.20' %}
+{% endif %}
+
 build:
     number: {{ build }}
     skip: True  # [py!=39]
@@ -52,7 +56,8 @@ requirements:
       - python
       - boost
       - fftw
-      - numpy
+      - numpy                             # [unix]
+      - numpy          {{ numpy }}        # [win]
       - ftgl
       - freetype
       - gsl
