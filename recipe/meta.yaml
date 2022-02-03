@@ -32,8 +32,8 @@ requirements:
       - sysroot_linux-64 2.17               # [linux64]
 
     host:
-      - pyqt                             # [ui == 'gui']
-      - pyopengl                         # [ui == 'gui']
+      - pyqt                                # [ui == 'gui']
+      - pyopengl                            # [ui == 'gui']
       - cmake        >=3.14
 
       - ipywidgets
@@ -42,10 +42,10 @@ requirements:
       - ipython
       - scikit-learn
       - pandas
-      - tensorflow-gpu 2.6                # [linux or win]
-      - tensorflow     2.6                # [osx]
+      - tensorflow-gpu 2.6                  # [linux or win]
+      - tensorflow     2.6                  # [osx]
       - bsddb3
-      - pydusa                            # [not win]
+      - pydusa                              # [not win]
       - nose
       - future
       - configparser
@@ -56,8 +56,8 @@ requirements:
       - python
       - boost
       - fftw
-      - numpy                             # [unix]
-      - numpy          {{ numpy }}        # [win]
+      - numpy                               # [unix]
+      - numpy          {{ numpy }}          # [win]
       - ftgl
       - freetype
       - gsl
@@ -68,8 +68,8 @@ requirements:
       - zlib
 
     run:
-      - pyqt                              # [ui == 'gui']
-      - pyopengl                          # [ui == 'gui']
+      - pyqt                                # [ui == 'gui']
+      - pyopengl                            # [ui == 'gui']
       - cmake        >=3.14
 
       - ipywidgets
@@ -78,10 +78,10 @@ requirements:
       - ipython
       - scikit-learn
       - pandas
-      - tensorflow-gpu 2.6                # [linux or win]
-      - tensorflow     2.6                # [osx]
+      - tensorflow-gpu 2.6                  # [linux or win]
+      - tensorflow     2.6                  # [osx]
       - bsddb3
-      - pydusa                            # [not win]
+      - pydusa                              # [not win]
       - nose
       - future
       - configparser
