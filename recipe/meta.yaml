@@ -1,4 +1,4 @@
-{% set build = 8 %}
+{% set build = 10 %}
 
 # prioritize gui variant via minor version
 {% if ui == 'gui' %}
@@ -11,8 +11,13 @@ package:
     name: eman-deps
     version: "30.{{ ver_minor }}"
 
+{% if win %}
+{% set numpy = '1.20' %}
+{% endif %}
+
 build:
     number: {{ build }}
+    skip: True  # [py!=39]
     skip: True  # [ui=='nogui']
 
     # add build string so packages can depend on
@@ -27,8 +32,8 @@ requirements:
       - sysroot_linux-64 2.17               # [linux64]
 
     host:
-      - pyqt                             # [ui == 'gui']
-      - pyopengl                         # [ui == 'gui']
+      - pyqt                                # [ui == 'gui']
+      - pyopengl                            # [ui == 'gui']
       - cmake        >=3.14
 
       - ipywidgets
@@ -37,8 +42,10 @@ requirements:
       - ipython
       - scikit-learn
       - pandas
+      - tensorflow-gpu 2.6                  # [linux or win]
+      - tensorflow     2.6                  # [osx]
       - bsddb3
-      - pydusa                            # [not win]
+      - pydusa                              # [not win]
       - nose
       - future
       - configparser
@@ -49,7 +56,8 @@ requirements:
       - python
       - boost
       - fftw
-      - numpy
+      - numpy                               # [unix]
+      - numpy          {{ numpy }}          # [win]
       - ftgl
       - freetype
       - gsl
@@ -60,8 +68,8 @@ requirements:
       - zlib
 
     run:
-      - pyqt                              # [ui == 'gui']
-      - pyopengl                          # [ui == 'gui']
+      - pyqt                                # [ui == 'gui']
+      - pyopengl                            # [ui == 'gui']
       - cmake        >=3.14
 
       - ipywidgets
@@ -70,8 +78,10 @@ requirements:
       - ipython
       - scikit-learn
       - pandas
+      - tensorflow-gpu 2.6                  # [linux or win]
+      - tensorflow     2.6                  # [osx]
       - bsddb3
-      - pydusa                            # [not win]
+      - pydusa                              # [not win]
       - nose
       - future
       - configparser
