@@ -1,0 +1,78 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
+boost:
+- 1.74.0
+c_compiler:
+- clang
+c_compiler_version:
+- '11'
+channel_sources:
+- cryoem, conda-forge
+channel_targets:
+- cryoem main
+fftw:
+- '3'
+freetype:
+- '2'
+gsl:
+- '2.7'
+hdf5:
+- 1.10.6
+jpeg:
+- '9'
+libpng:
+- '1.6'
+libtiff:
+- '4'
+macos_machine:
+- x86_64-apple-darwin13.4.0
+nodejs:
+- '*'
+numpy:
+- '1.18'
+pin_run_as_build:
+  boost:
+    max_pin: x.x.x
+  fftw:
+    max_pin: x
+  freetype:
+    max_pin: x
+  jpeg:
+    max_pin: x
+  libpng:
+    max_pin: x.x
+  libtiff:
+    max_pin: x
+  nodejs:
+    max_pin: x
+  numpy:
+    min_pin: x.x
+    max_pin: x.x
+  pydusa:
+    max_pin: x.x.x
+  pyopengl:
+    max_pin: x.x
+  pyqt:
+    max_pin: x.x
+  python:
+    min_pin: x.x
+    max_pin: x.x
+  zlib:
+    max_pin: x.x
+pydusa:
+- '3.0'
+pyopengl:
+- 3.1.5
+pyqt:
+- '5'
+python:
+- 3.8.* *_cpython
+target_platform:
+- osx-64
+ui:
+- gui
+zip_keys:
+- - python
+  - numpy
+zlib:
+- '1.2'

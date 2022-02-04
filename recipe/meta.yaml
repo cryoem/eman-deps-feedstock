@@ -1,4 +1,4 @@
-{% set build = 1 %}
+{% set build = 5 %}
 
 # prioritize gui variant via minor version
 {% if ui == 'gui' %}
@@ -9,12 +9,11 @@
 
 package:
     name: eman-deps
-    version: "29.{{ ver_minor }}"
+    version: "30.{{ ver_minor }}"
 
 build:
     number: {{ build }}
-    skip: True  # [win32]
-    skip: True  # [py!=37]
+    skip: True  # [ui=='nogui']
 
     # add build string so packages can depend on
     # gui or nogui variants explicitly:
@@ -28,8 +27,8 @@ requirements:
       - sysroot_linux-64 2.17               # [linux64]
 
     host:
-      - pyqt           5.*                # [ui == 'gui']
-      - pyopengl       3.1.5              # [ui == 'gui']
+      - pyqt                             # [ui == 'gui']
+      - pyopengl                         # [ui == 'gui']
       - cmake        >=3.14
 
       - matplotlib
@@ -37,22 +36,19 @@ requirements:
       - ipython
       - scikit-learn
       - pandas
-      - tensorflow-gpu 2.*                # [linux]
-      - tensorflow     2.*                # [osx or win]
       - bsddb3
-      - pydusa         3.0                # [not win]
+      - pydusa                            # [not win]
       - nose
       - future
       - configparser
       - tqdm
       - jupyterlab
-      - nodejs         16
+      - nodejs
 
       - python
       - boost
-      - fftw           *      mpi_openmpi_*  # [not win]
-      - fftw           *      nompi_*        # [win]
-      - numpy          1.18
+      - fftw
+      - numpy
       - ftgl
       - freetype
       - gsl
@@ -63,8 +59,8 @@ requirements:
       - zlib
 
     run:
-      - pyqt           5.*                # [ui == 'gui']
-      - pyopengl       3.1.5              # [ui == 'gui']
+      - pyqt                              # [ui == 'gui']
+      - pyopengl                          # [ui == 'gui']
       - cmake        >=3.14
 
       - matplotlib
@@ -72,22 +68,18 @@ requirements:
       - ipython
       - scikit-learn
       - pandas
-      - tensorflow-gpu 2.*                # [linux]
-      - tensorflow     2.*                # [osx or win]
       - bsddb3
-      - pydusa         3.0                # [not win]
+      - pydusa                            # [not win]
       - nose
       - future
       - configparser
       - tqdm
       - jupyterlab
-      - nodejs         16
+      - nodejs
 
       - python
       - boost
-      - fftw           *      mpi_openmpi_*  # [not win]
-      - fftw           *      nompi_*        # [win]
-      - numpy          1.18
+      - {{ pin_compatible('numpy', min_pin='x.x', max_pin='x.x') }}
       - ftgl
       - freetype
       - gsl
@@ -105,6 +97,7 @@ test:
     - test_imports_pydusa.py                # [not win]
   commands:
     - echo "TESTING eman-deps"
+    - python -c "import numpy; assert numpy.version.version.startswith('{{ numpy }}'), 'NumPy version expected to be {{ numpy }}'"
     - cmake --version
     - python test_imports.py
     - python test_imports_future.py

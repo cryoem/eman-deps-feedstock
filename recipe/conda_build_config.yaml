@@ -1,7 +1,26 @@
 channel_sources:
-- cryoem, conda-forge, defaults
+- cryoem, conda-forge
 channel_targets:
 - cryoem main
 ui:
   - gui
   - nogui
+
+pyqt:
+  - 5
+pyopengl:
+  - 3.1.5
+nodejs:
+  - '*'
+pydusa:
+  - 3.0
+
+pin_run_as_build:
+  pyqt:
+    max_pin: x.x
+  pyopengl:
+    max_pin: x.x
+  nodejs:
+    max_pin: x
+  pydusa:
+    max_pin: x.x.x
