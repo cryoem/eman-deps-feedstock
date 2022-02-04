@@ -18,7 +18,6 @@ package:
 build:
     number: {{ build }}
     skip: True  # [py!=39]
-    skip: True  # [ui=='nogui']
 
     # add build string so packages can depend on
     # gui or nogui variants explicitly:
