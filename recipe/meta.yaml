@@ -1,4 +1,4 @@
-{% set build = 10 %}
+{% set build = 0 %}
 
 # prioritize gui variant via minor version
 {% if ui == 'gui' %}
@@ -9,7 +9,7 @@
 
 package:
     name: eman-deps
-    version: "30.{{ ver_minor }}"
+    version: "31.{{ ver_minor }}"
 
 {% if win %}
 {% set numpy = '1.20' %}
