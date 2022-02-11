@@ -21,7 +21,5 @@ pin_run_as_build:
     max_pin: x.x
   pyopengl:
     max_pin: x.x
-  nodejs:
-    max_pin: x
   pydusa:
     max_pin: x.x.x
