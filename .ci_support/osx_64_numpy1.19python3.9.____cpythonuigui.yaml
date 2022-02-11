@@ -43,8 +43,6 @@ pin_run_as_build:
     max_pin: x.x
   libtiff:
     max_pin: x
-  nodejs:
-    max_pin: x
   numpy:
     min_pin: x.x
     max_pin: x.x
