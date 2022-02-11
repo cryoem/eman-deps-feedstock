@@ -23,3 +23,6 @@ pin_run_as_build:
     max_pin: x.x
   pydusa:
     max_pin: x.x.x
+
+ignore_version:
+  - nodejs
