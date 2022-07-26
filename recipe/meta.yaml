@@ -43,7 +43,6 @@ requirements:
       - pandas
       - tensorflow-gpu 2.6                  # [linux or win]
       - tensorflow     2.6                  # [osx]
-      - bsddb3
       - pydusa                              # [not win]
       - nose
       - future
@@ -79,7 +78,6 @@ requirements:
       - pandas
       - tensorflow-gpu 2.6                  # [linux or win]
       - tensorflow     2.6                  # [osx]
-      - bsddb3
       - pydusa                              # [not win]
       - nose
       - future
