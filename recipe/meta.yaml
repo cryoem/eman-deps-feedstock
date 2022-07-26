@@ -43,7 +43,7 @@ requirements:
       - pandas
       - tensorflow-gpu 2.6                  # [linux or win]
       - tensorflow     2.6                  # [osx]
-      - pydusa                              # [not win]
+      - pydusa                              # [not win and (build_platform == target_platform)]
       - nose
       - future
       - configparser
@@ -78,7 +78,7 @@ requirements:
       - pandas
       - tensorflow-gpu 2.6                  # [linux or win]
       - tensorflow     2.6                  # [osx]
-      - pydusa                              # [not win]
+      - pydusa                              # [not win and (build_platform == target_platform)]
       - nose
       - future
       - configparser
