@@ -1,17 +1,15 @@
+MACOSX_DEPLOYMENT_TARGET:
+- '10.9'
 boost:
 - 1.74.0
 c_compiler:
-- gcc
+- clang
 c_compiler_version:
-- '9'
-cdt_name:
-- cos7
+- '13'
 channel_sources:
 - cryoem, conda-forge
 channel_targets:
 - cryoem main
-docker_image:
-- quay.io/condaforge/linux-anvil-cos7-x86_64
 fftw:
 - '3'
 freetype:
@@ -19,13 +17,15 @@ freetype:
 gsl:
 - '2.7'
 hdf5:
-- 1.10.6
+- 1.12.1
 jpeg:
 - '9'
 libpng:
 - '1.6'
 libtiff:
 - '4'
+macos_machine:
+- x86_64-apple-darwin13.4.0
 nodejs:
 - '*'
 numpy:
@@ -66,7 +66,7 @@ pyqt:
 python:
 - 3.9.* *_cpython
 target_platform:
-- linux-64
+- osx-64
 ui:
 - nogui
 zip_keys:
