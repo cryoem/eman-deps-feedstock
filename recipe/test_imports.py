@@ -1,5 +1,4 @@
 from bisect import insort
-from bsddb3 import db
 from builtins import object
 from builtins import range
 from collections import Counter

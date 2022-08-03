@@ -1,11 +1,11 @@
 MACOSX_DEPLOYMENT_TARGET:
-- '10.9'
+- '11.0'
 boost:
 - 1.74.0
 c_compiler:
 - clang
 c_compiler_version:
-- '11'
+- '13'
 channel_sources:
 - cryoem, conda-forge
 channel_targets:
@@ -17,7 +17,7 @@ freetype:
 gsl:
 - '2.7'
 hdf5:
-- 1.10.6
+- 1.12.1
 jpeg:
 - '9'
 libpng:
@@ -25,7 +25,7 @@ libpng:
 libtiff:
 - '4'
 macos_machine:
-- x86_64-apple-darwin13.4.0
+- arm64-apple-darwin20.0.0
 nodejs:
 - '*'
 numpy:
@@ -66,7 +66,7 @@ pyqt:
 python:
 - 3.9.* *_cpython
 target_platform:
-- osx-64
+- osx-arm64
 ui:
 - nogui
 zip_keys:

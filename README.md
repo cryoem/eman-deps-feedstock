@@ -40,16 +40,41 @@ conda config --add channels cryoem
 conda config --set channel_priority strict
 ```
 
-Once the `cryoem` channel has been enabled, `eman-deps` can be installed with:
+Once the `cryoem` channel has been enabled, `eman-deps` can be installed with `conda`:
 
 ```
 conda install eman-deps
 ```
 
-It is possible to list all of the versions of `eman-deps` available on your platform with:
+or with `mamba`:
+
+```
+mamba install eman-deps
+```
+
+It is possible to list all of the versions of `eman-deps` available on your platform with `conda`:
 
 ```
 conda search eman-deps --channel cryoem
+```
+
+or with `mamba`:
+
+```
+mamba search eman-deps --channel cryoem
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search eman-deps --channel cryoem
+
+# List packages depending on `eman-deps`:
+mamba repoquery whoneeds eman-deps --channel cryoem
+
+# List dependencies of `eman-deps`:
+mamba repoquery depends eman-deps --channel cryoem
 ```
 
 
