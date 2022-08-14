@@ -58,7 +58,7 @@ requirements:
       - ftgl
       - freetype
       - gsl
-      - hdf5
+      - hdf5         >=1.12
       - jpeg
       - libtiff
       - libpng
@@ -90,7 +90,7 @@ requirements:
       - ftgl
       - freetype
       - gsl
-      - hdf5
+      - hdf5         >=1.12
       - jpeg
       - libtiff
       - libpng
