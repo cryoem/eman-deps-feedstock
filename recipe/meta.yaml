@@ -1,4 +1,4 @@
-{% set build = 0 %}
+{% set build = 1 %}
 
 # prioritize gui variant via minor version
 {% if ui == 'gui' %}
@@ -42,7 +42,7 @@ requirements:
       - scikit-learn
       - pandas
       - tensorflow
-      - pydusa                              # [not win and (build_platform == target_platform)]
+      - pydusa                              # [not win]
       - nose
       - future
       - configparser
@@ -76,7 +76,7 @@ requirements:
       - scikit-learn
       - pandas
       - tensorflow
-      - pydusa                              # [not win and (build_platform == target_platform)]
+      - pydusa                              # [not win]
       - nose
       - future
       - configparser
