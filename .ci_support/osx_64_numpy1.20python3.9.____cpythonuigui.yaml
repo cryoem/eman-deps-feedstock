@@ -5,7 +5,7 @@ boost:
 c_compiler:
 - clang
 c_compiler_version:
-- '13'
+- '14'
 channel_sources:
 - cryoem, conda-forge
 channel_targets:
@@ -16,8 +16,6 @@ freetype:
 - '2'
 gsl:
 - '2.7'
-hdf5:
-- 1.12.1
 jpeg:
 - '9'
 libpng:
@@ -29,20 +27,10 @@ macos_machine:
 nodejs:
 - '*'
 numpy:
-- '1.19'
+- '1.20'
 pin_run_as_build:
   boost:
     max_pin: x.x.x
-  fftw:
-    max_pin: x
-  freetype:
-    max_pin: x
-  jpeg:
-    max_pin: x
-  libpng:
-    max_pin: x.x
-  libtiff:
-    max_pin: x
   numpy:
     min_pin: x.x
     max_pin: x.x
@@ -55,8 +43,6 @@ pin_run_as_build:
   python:
     min_pin: x.x
     max_pin: x.x
-  zlib:
-    max_pin: x.x
 pydusa:
 - '3.1'
 pyopengl:
@@ -68,7 +54,7 @@ python:
 target_platform:
 - osx-64
 ui:
-- nogui
+- gui
 zip_keys:
 - - python
   - numpy
