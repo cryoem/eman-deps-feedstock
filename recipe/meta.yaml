@@ -9,7 +9,7 @@
 
 package:
     name: eman-deps
-    version: "33.{{ ver_minor }}"
+    version: "34.{{ ver_minor }}"
 
 build:
     number: {{ build }}
