@@ -1,9 +1,9 @@
 boost:
-- 1.74.0
+- 1.78.0
 c_compiler:
 - gcc
 c_compiler_version:
-- '10'
+- '11'
 cdt_name:
 - cos7
 channel_sources:
