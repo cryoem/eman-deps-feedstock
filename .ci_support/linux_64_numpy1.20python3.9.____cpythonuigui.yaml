@@ -23,7 +23,7 @@ jpeg:
 libpng:
 - '1.6'
 libtiff:
-- '4'
+- '4.4'
 nodejs:
 - '*'
 numpy:
