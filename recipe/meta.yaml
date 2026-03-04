@@ -1,4 +1,4 @@
-{% set build = 2 %}
+{% set build = 3 %}
 
 # prioritize gui variant via minor version
 {% if ui == 'gui' %}
@@ -9,11 +9,10 @@
 
 package:
     name: eman-deps
-    version: "33.{{ ver_minor }}"
+    version: "34.{{ ver_minor }}"
 
 build:
     number: {{ build }}
-    skip: True  # [py!=39]
 
     # add build string so packages can depend on
     # gui or nogui variants explicitly:
@@ -49,7 +48,7 @@ requirements:
       - python
       - boost
       - fftw
-      - numpy
+      - numpy {{ numpy }}
       - ftgl
       - freetype
       - gsl
@@ -81,8 +80,8 @@ requirements:
 
       - python
       - boost
-      - numpy
-#      - {{ pin_compatible('numpy', min_pin='x.x', max_pin='x.x') }}
+      - numpy {{ numpy }}
+      - {{ pin_compatible('numpy', min_pin='x.x', max_pin='x.x') }}
       - ftgl
       - freetype
       - gsl
