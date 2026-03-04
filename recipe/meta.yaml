@@ -12,7 +12,7 @@ package:
     version: "34.{{ ver_minor }}"
 
 build:
-    number: {{ build }}
+    number: 3
 
     # add build string so packages can depend on
     # gui or nogui variants explicitly:
