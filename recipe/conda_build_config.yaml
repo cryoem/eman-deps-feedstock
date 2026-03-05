@@ -11,6 +11,8 @@ channel_sources:
 - cryoem, conda-forge, defaults  # [win]
 channel_targets:
 - cryoem main
+__cuda:
+  - "12.8"
 ui:
   - gui
   - nogui

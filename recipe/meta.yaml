@@ -1,4 +1,4 @@
-{% set build = 3 %}
+{% set build = 4 %}
 
 # prioritize gui variant via minor version
 {% if ui == 'gui' %}
@@ -12,7 +12,7 @@ package:
     version: "34.{{ ver_minor }}"
 
 build:
-    number: 3
+    number: 4
 
     # add build string so packages can depend on
     # gui or nogui variants explicitly:
@@ -36,7 +36,8 @@ requirements:
       - ipython
       - scikit-learn
       - pandas
-      - tensorflow
+      - tensorflow >=2.18
+      - numpy >=2.0
 #      - pydusa                              # [not win]
       - nose
       - future
@@ -48,12 +49,11 @@ requirements:
       - python
       - boost
       - fftw
-      - numpy {{ numpy }}
       - ftgl
       - freetype
       - gsl
       - hdf5         >=1.12
-      - jpeg
+      - libjpeg-turbo
       - libtiff
       - libpng
       - zlib
@@ -69,7 +69,7 @@ requirements:
       - ipython
       - scikit-learn
       - pandas
-      - tensorflow
+      - tensorflow >=2.18
 #      - pydusa                              # [not win]
       - nose
       - future
@@ -80,13 +80,13 @@ requirements:
 
       - python
       - boost
-      - numpy {{ numpy }}
+      - numpy >=2.0
       - {{ pin_compatible('numpy', min_pin='x.x', max_pin='x.x') }}
       - ftgl
       - freetype
       - gsl
       - hdf5         >=1.12
-      - jpeg
+      - libjpeg-turbo
       - libtiff
       - libpng
       - zlib
@@ -102,7 +102,6 @@ test:
 #    - test_pydusa.py                        # [not win]
   commands:
     - echo "TESTING eman-deps"
-    - python -c "import numpy; assert numpy.version.version.startswith('{{ numpy }}'), 'NumPy version expected to be {{ numpy }}'"
     - cmake --version
     - python test_imports.py
     - python test_imports_future.py
