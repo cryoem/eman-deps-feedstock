@@ -13,8 +13,8 @@ channel_targets:
 - cryoem main
 __cuda:
   - "12.8"
-__osx:
-    - "10.15"  # Dummy value to satisfy the pyopengl constraint
+__linux:
+    - "1"
 
 ui:
   - gui
@@ -26,9 +26,6 @@ pyopengl:
   - 3.1.7
 nodejs:
   - '*'
-
-numpy:
-  - 2.2  # Or 2.1 depending on your specific EMAN2 compatibility
 
 pin_run_as_build:
   pyqt:

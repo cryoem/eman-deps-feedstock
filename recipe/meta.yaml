@@ -30,6 +30,8 @@ requirements:
       - pyqt                                # [ui == 'gui']
       - pyopengl     =3.1.7                       # [ui == 'gui']
       - cmake        >=3.14
+      - libopengl-devel          # [linux]  <-- CRITICAL: Forces Linux build selection
+      - __linux                  # [linux]  <-- Helps resolve the platform ambiguity
 
       - ipywidgets
       - matplotlib
@@ -64,6 +66,8 @@ requirements:
       - pyqt                                # [ui == 'gui']
       - pyopengl     =3.1.7                       # [ui == 'gui']
       - cmake        >=3.14
+      - libopengl-devel          # [linux]  <-- CRITICAL: Forces Linux build selection
+      - __linux                  # [linux]  <-- Helps resolve the platform ambiguity
 
       - ipywidgets
       - matplotlib
