@@ -26,9 +26,9 @@ requirements:
       - sysroot_linux-64 2.17               # [linux64]
 
     host:
-      - libopengl-devel          # [linux]
+#      - libopengl-devel          # [linux]
       - pyqt                                # [ui == 'gui']
-      - pyopengl     >=3.1.10                       # [ui == 'gui']
+      - pyopengl     >=3.1.7                       # [ui == 'gui']
       - cmake        >=3.14
 
       - ipywidgets
@@ -60,9 +60,9 @@ requirements:
       - zlib
 
     run:
-      - libopengl-devel          # [linux]
+#      - libopengl-devel          # [linux]
       - pyqt                                # [ui == 'gui']
-      - pyopengl     >=3.1.10                       # [ui == 'gui']
+      - pyopengl     >=3.1.7                       # [ui == 'gui']
       - cmake        >=3.14
 
       - ipywidgets
