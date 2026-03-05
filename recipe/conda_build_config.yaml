@@ -1,3 +1,11 @@
+provider:
+  linux: github_actions
+  osx: github_actions
+  win: github_actions
+        # This line prevents the tool from trying to ping Azure
+azure:
+  force: false
+
 channel_sources:
 - cryoem, conda-forge            # [unix]
 - cryoem, conda-forge, defaults  # [win]
@@ -13,16 +21,15 @@ pyopengl:
   - 3.1.5
 nodejs:
   - '*'
-pydusa:
-  - 3.1
+
+numpy:
+  - 2.2  # Or 2.1 depending on your specific EMAN2 compatibility
 
 pin_run_as_build:
   pyqt:
     max_pin: x.x
   pyopengl:
     max_pin: x.x
-  pydusa:
-    max_pin: x.x.x
 
 ignore_version:
   - nodejs
