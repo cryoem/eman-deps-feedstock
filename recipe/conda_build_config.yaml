@@ -13,16 +13,17 @@ channel_targets:
 - cryoem main
 __cuda:
   - "12.8"
-#__osx:
-#    - "10.15"  # Dummy value to satisfy the pyopengl constraint
+__osx:
+    - "10.15"  # Dummy value to satisfy the pyopengl constraint
+
 ui:
   - gui
   - nogui
 
 pyqt:
   - 5
-#pyopengl:
-#  - 3.1.5
+pyopengl:
+  - 3.1.7
 nodejs:
   - '*'
 
