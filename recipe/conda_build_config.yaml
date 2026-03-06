@@ -2,34 +2,33 @@ provider:
   linux: github_actions
   osx: github_actions
   win: github_actions
-        # This line prevents the tool from trying to ping Azure
+
 azure:
   force: false
 
 channel_sources:
-- conda-forge, cryoem            # [unix]
-- conda-forge, cryoem, defaults  # [win]
+  - conda-forge, cryoem        # [unix]
+  - conda-forge, cryoem, defaults  # [win]
+
 channel_targets:
-- cryoem main
-__cuda:
-  - "12.8"
-__linux:
-    - "1"
+  - cryoem main
 
 ui:
   - gui
   - nogui
 
+numpy:
+  - 2.0
+
 pyqt:
   - 5
+
 nodejs:
-  - '*'
+  - "*"
 
 pin_run_as_build:
   pyqt:
     max_pin: x.x
-#  pyopengl:
-#    max_pin: x.x
 
 ignore_version:
   - nodejs

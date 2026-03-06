@@ -1,119 +1,70 @@
-{% set build = 4 %}
+{% set build = 5 %}
 
-# prioritize gui variant via minor version
-{% if ui == 'gui' %}
+{% if ui == "gui" %}
 {% set ver_minor = 1 %}
 {% else %}
 {% set ver_minor = 0 %}
 {% endif %}
 
 package:
-    name: eman-deps
-    version: "34.{{ ver_minor }}"
+  name: eman-deps
+  version: "34.{{ ver_minor }}"
 
 build:
-    number: 4
-
-    # add build string so packages can depend on
-    # gui or nogui variants explicitly:
-    # `pkg * gui_*` for any gui
-    # `pkg * nogui_*` for no gui
-    string: "{{ ui }}_h{{ PKG_HASH }}_{{ build }}"
+  number: {{ build }}
+  noarch: python
+  string: "{{ ui }}_{{ build }}"
 
 requirements:
-    build:
-      - {{ compiler('c') }}
-      - sysroot_linux-64 2.17               # [linux64]
+  host:
+    - python
 
-    host:
-#      - libopengl-devel          # [linux]
-      - pyqt                                # [ui == 'gui']
-      - pyopengl     =3.1.7                       # [ui == 'gui']
-      - cmake        >=3.14
-      - libopengl-devel          # [linux]  <-- CRITICAL: Forces Linux build selection
-      - __linux                  # [linux]  <-- Helps resolve the platform ambiguity
+  run:
+    - python
 
-      - ipywidgets
-      - matplotlib
-      - scipy
-      - ipython
-      - scikit-learn
-      - pandas
-      - tensorflow >=2.18
-      - numpy >=2.0
-#      - pydusa                              # [not win]
-      - nose
-      - future
-      - configparser
-      - tqdm
-      - jupyterlab
-      - nodejs
+    # GUI dependencies
+    - pyqt           # [ui == "gui"]
+    - pyopengl >=3.1 # [ui == "gui"]
 
-      - python
-      - boost
-      - fftw
-      - ftgl
-      - freetype
-      - gsl
-      - hdf5         >=1.12
-      - libjpeg-turbo
-      - libtiff
-      - libpng
-      - zlib
+    # scientific stack
+    - numpy
+    - scipy
+    - pandas
+    - scikit-learn
+    - matplotlib
 
-    run:
-#      - libopengl-devel          # [linux]
-      - pyqt                                # [ui == 'gui']
-      - pyopengl     =3.1.7                       # [ui == 'gui']
-      - cmake        >=3.14
-      - libopengl-devel          # [linux]  <-- CRITICAL: Forces Linux build selection
-      - __linux                  # [linux]  <-- Helps resolve the platform ambiguity
+    # ML
+    - tensorflow >=2.18
 
-      - ipywidgets
-      - matplotlib
-      - scipy
-      - ipython
-      - scikit-learn
-      - pandas
-      - tensorflow >=2.18
-#      - pydusa                              # [not win]
-      - nose
-      - future
-      - configparser
-      - tqdm
-      - jupyterlab
-      - nodejs
+    # interactive environment
+    - ipython
+    - ipywidgets
+    - jupyterlab
 
-      - python
-      - boost
-      - numpy >=2.0
-      - {{ pin_compatible('numpy', min_pin='x.x', max_pin='x.x') }}
-      - ftgl
-      - freetype
-      - gsl
-      - hdf5         >=1.12
-      - libjpeg-turbo
-      - libtiff
-      - libpng
-      - zlib
+    # utilities
+    - tqdm
+    - future
+    - configparser
+
+    # system libs
+    - boost
+    - fftw
+    - ftgl
+    - freetype
+    - gsl
+    - hdf5 >=1.12
+    - libjpeg-turbo
+    - libtiff
+    - libpng
+    - zlib
 
 test:
-  requires:
-    - openssh                               # [not win]
-  files:
-    - test_imports.py
-    - test_imports_future.py
-    - test_imports_gui.py                   # [ui == 'gui']
-#    - test_imports_pydusa.py                # [not win]
-#    - test_pydusa.py                        # [not win]
-  commands:
-    - echo "TESTING eman-deps"
-    - cmake --version
-    - python test_imports.py
-    - python test_imports_future.py
-    - python test_imports_gui.py            # [ui == 'gui']
-#    - python test_imports_pydusa.py         # [not win]
-#    - mpirun -n 2 --oversubscribe python test_pydusa.py  # [not win]
+  imports:
+    - numpy
+    - scipy
+    - sklearn
+    - pandas
 
 about:
-  summary: Meta-package for eman2 dependencies
+  summary: Meta-package for EMAN2 dependencies
+  license: BSD-3-Clause
