@@ -7,8 +7,8 @@ azure:
   force: false
 
 channel_sources:
-- cryoem, conda-forge            # [unix]
-- cryoem, conda-forge, defaults  # [win]
+- conda-forge, cryoem            # [unix]
+- conda-forge, cryoem, defaults  # [win]
 channel_targets:
 - cryoem main
 __cuda:
@@ -22,8 +22,6 @@ ui:
 
 pyqt:
   - 5
-pyopengl:
-  - 3.1.7
 nodejs:
   - '*'
 
